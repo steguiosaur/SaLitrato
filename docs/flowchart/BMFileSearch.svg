@@ -1,0 +1,1124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="34.910744cm"
+   height="47.488728cm"
+   viewBox="58 59 698.21487 941.85976"
+   version="1.1"
+   id="svg3767"
+   sodipodi:docname="BMFileSearch.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   inkscape:export-filename="BMFileSearch.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3771" />
+  <sodipodi:namedview
+     id="namedview3769"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="cm"
+     showgrid="false"
+     inkscape:zoom="0.64492187"
+     inkscape:cx="793.89461"
+     inkscape:cy="1461.4173"
+     inkscape:window-width="667"
+     inkscape:window-height="704"
+     inkscape:window-x="685"
+     inkscape:window-y="50"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g3701" />
+  <g
+     id="g3765"
+     transform="translate(-1.1740999,-5.2054155)">
+    <g
+       id="g3347">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         d="m 267.834,61.2054 h 79.333 c 10.954,0 19.834,10.2974 19.834,23 0,12.7026 -8.88,22.9996 -19.834,22.9996 h -79.333 c -10.954,0 -19.833,-10.297 -19.833,-22.9996 0,-12.7026 8.879,-23 19.833,-23 z"
+         id="path3341" />
+      <text
+         font-size="12.8px"
+         style="font-style:normal;font-weight:700;font-family:sans-serif;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="307.50101"
+         y="88.205399"
+         id="text3345"><tspan
+           x="307.50101"
+           y="88.205399"
+           id="tspan3343"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold'">START</tspan></text>
+    </g>
+    <g
+       id="g3357">
+      <polygon
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         points="308.097,156.283 362.72,208.455 308.097,260.626 253.474,208.455 "
+         id="polygon3349" />
+      <text
+         font-size="12.8px"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold';text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="308.09698"
+         y="204.355"
+         id="text3355"><tspan
+           x="308.09698"
+           y="204.355"
+           id="tspan3351"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold'">Select</tspan><tspan
+           x="308.09698"
+           y="220.355"
+           id="tspan3353"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold'">Button</tspan></text>
+    </g>
+    <g
+       id="g3363">
+      <line
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         x1="307.50101"
+         y1="107.205"
+         x2="307.96301"
+         y2="145.284"
+         id="line3359" />
+      <polygon
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         points="308.085,155.283 312.963,145.223 302.964,145.344 "
+         id="polygon3361" />
+    </g>
+    <g
+       id="g3371">
+      <polygon
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         points="104.045,189.254 190.618,189.254 176.787,227.254 90.2138,227.254 "
+         id="polygon3365" />
+      <text
+         font-size="12.8px"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold';text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="140.416"
+         y="212.15401"
+         id="text3369"><tspan
+           x="140.416"
+           y="212.15401"
+           id="tspan3367"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold'">Add vault</tspan></text>
+    </g>
+    <g
+       id="g3379">
+      <polygon
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         points="441.272,188.249 536.945,188.249 522.191,228.787 426.517,228.787 "
+         id="polygon3373" />
+      <text
+         font-size="12.8px"
+         style="font-style:normal;font-weight:700;font-family:sans-serif;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="481.73099"
+         y="212.418"
+         id="text3377"><tspan
+           x="481.73099"
+           y="212.418"
+           id="tspan3375"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold'">Open vault</tspan></text>
+    </g>
+    <g
+       id="g3385">
+      <line
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         x1="253.474"
+         y1="208.455"
+         x2="194.703"
+         y2="208.285"
+         id="line3381" />
+      <polygon
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         points="184.703,208.256 194.688,213.285 194.717,203.285 "
+         id="polygon3383" />
+    </g>
+    <text
+       font-size="12.8px"
+       style="font-style:normal;font-weight:700;font-family:sans-serif;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       x="73.703209"
+       y="173.64833"
+       id="text3389"><tspan
+         x="73.703209"
+         y="173.64833"
+         id="tspan3387"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'">Vault = Folder to be processed</tspan></text>
+    <g
+       id="g3399">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         x="238.991"
+         y="302.953"
+         width="138.25"
+         height="54"
+         rx="0"
+         ry="0"
+         id="rect3391" />
+      <text
+         font-size="12.8px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="308.116"
+         y="325.853"
+         id="text3397"><tspan
+           x="308.116"
+           y="325.853"
+           id="tspan3393"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'">Create vault\_name</tspan><tspan
+           x="308.116"
+           y="341.853"
+           id="tspan3395"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'">folder</tspan></text>
+    </g>
+    <g
+       id="g3431">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         x="199.817"
+         y="542.26202"
+         width="225.14999"
+         height="246"
+         rx="0"
+         ry="0"
+         id="rect3401" />
+      <text
+         font-size="12.8px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         x="208.817"
+         y="573.16199"
+         id="text3429"><tspan
+           sodipodi:role="line"
+           id="tspan4827"
+           x="208.817"
+           y="573.16199"><tspan
+             x="208.817"
+             y="573.16199"
+             id="tspan3403"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'"></tspan></tspan><tspan
+           sodipodi:role="line"
+           x="208.817"
+           y="589.16199"
+           id="tspan4863" /><tspan
+           sodipodi:role="line"
+           x="208.817"
+           y="605.16199"
+           id="tspan4861" /><tspan
+           sodipodi:role="line"
+           id="tspan4829"
+           x="208.817"
+           y="621.16199"><tspan
+             x="208.817"
+             y="573.16199"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'"
+             id="tspan4831"></tspan></tspan><tspan
+           sodipodi:role="line"
+           x="208.817"
+           y="637.16199"
+           id="tspan4845"><tspan
+             x="208.817"
+             y="573.16199"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'"
+             id="tspan4847"></tspan></tspan><tspan
+           sodipodi:role="line"
+           x="208.817"
+           y="653.16199"
+           id="tspan4865"><tspan
+             x="208.817"
+             y="573.16199"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'"
+             id="tspan4867"></tspan></tspan><tspan
+           sodipodi:role="line"
+           x="208.817"
+           y="669.16199"
+           id="tspan4881"><tspan
+             x="208.817"
+             y="573.16199"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'"
+             id="tspan4883"></tspan></tspan><tspan
+           sodipodi:role="line"
+           x="208.817"
+           y="685.16199"
+           id="tspan4897"><tspan
+             x="208.817"
+             y="573.16199"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'"
+             id="tspan4899"></tspan></tspan><tspan
+           sodipodi:role="line"
+           x="208.817"
+           y="573.16199"
+           id="tspan4913"><tspan
+             x="208.817"
+             y="573.16199"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'"
+             id="tspan4915">BEGIN FileDetector()</tspan><tspan
+             x="208.817"
+             y="589.16199"
+             id="tspan3405"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'" /><tspan
+             x="208.817"
+             y="605.16199"
+             id="tspan3407"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'">IF image file (jpeg, png, etc...)</tspan><tspan
+             xml:space="preserve"
+             x="208.817"
+             y="621.16199"
+             id="tspan3409"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'">    Detect text using OCR</tspan><tspan
+             xml:space="preserve"
+             x="208.817"
+             y="637.16199"
+             id="tspan3411"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'">    Store text and metadata in file</tspan><tspan
+             x="208.817"
+             y="653.16199"
+             id="tspan3413"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'" /><tspan
+             x="208.817"
+             y="669.16199"
+             id="tspan3415"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'">ELIF pdf, word, txt, pptx</tspan><tspan
+             xml:space="preserve"
+             x="208.817"
+             y="685.16199"
+             id="tspan3417"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'">    Store metadata in file</tspan><tspan
+             x="208.817"
+             y="701.16199"
+             id="tspan3419"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'" /><tspan
+             x="208.817"
+             y="717.16199"
+             id="tspan3421"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'">ELSE</tspan><tspan
+             xml:space="preserve"
+             x="208.817"
+             y="733.16199"
+             id="tspan3423"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'">     File not supported</tspan><tspan
+             x="208.817"
+             y="749.16199"
+             id="tspan3425"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'" /><tspan
+             x="208.817"
+             y="765.16199"
+             id="tspan3427"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'">END</tspan></tspan></text>
+    </g>
+    <g
+       id="g3439">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         d="M 75.9712,324.579 190.471,301.954 v 56.563 H 75.9712 Z"
+         id="path3433" />
+      <text
+         font-size="12.8px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="133.22099"
+         y="345.548"
+         id="text3437"><tspan
+           x="133.22099"
+           y="345.548"
+           id="tspan3435"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'">Enter vault\_name</tspan></text>
+    </g>
+    <g
+       id="g3445">
+      <polyline
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         points="362.72,208.455 422.894,208.508 "
+         id="polyline3441" />
+      <polygon
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         points="432.894,208.517 422.899,203.508 422.89,213.508 "
+         id="polygon3443" />
+    </g>
+    <g
+       id="g3451">
+      <line
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         x1="133.50101"
+         y1="227.254"
+         x2="133.257"
+         y2="302.267"
+         id="line3447" />
+      <polygon
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         points="133.224,312.267 138.257,302.283 128.257,302.25 "
+         id="polygon3449" />
+    </g>
+    <g
+       id="g3457">
+      <line
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         x1="190.47099"
+         y1="330.23499"
+         x2="227.991"
+         y2="330.017"
+         id="line3453" />
+      <polygon
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         points="237.991,329.959 227.962,325.017 228.02,335.017 "
+         id="polygon3455" />
+    </g>
+    <g
+       id="g3463">
+      <line
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         x1="308.116"
+         y1="302.953"
+         x2="308.10199"
+         y2="271.62601"
+         id="line3459" />
+      <polygon
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         points="308.097,261.626 303.102,271.629 313.102,271.624 "
+         id="polygon3461" />
+    </g>
+    <g
+       id="g3473">
+      <polygon
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         points="474.501,365.342 530.295,418.796 474.501,472.249 418.707,418.796 "
+         id="polygon3465" />
+      <text
+         font-size="12.8px"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold';text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="474.50101"
+         y="414.69601"
+         id="text3471"><tspan
+           x="474.50101"
+           y="414.69601"
+           id="tspan3467"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold'">Select</tspan><tspan
+           x="474.50101"
+           y="430.69601"
+           id="tspan3469"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold'">Action</tspan></text>
+    </g>
+    <g
+       id="g3479">
+      <line
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         x1="474.354"
+         y1="228.787"
+         x2="474.45001"
+         y2="353.405"
+         id="line3475" />
+      <polygon
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         points="474.458,363.405 479.45,353.401 469.45,353.408 "
+         id="polygon3477" />
+    </g>
+    <g
+       id="g3487">
+      <polygon
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         points="283.748,398.347 371.833,398.347 356.968,439.189 268.883,439.189 "
+         id="polygon3481" />
+      <text
+         font-size="12.8px"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold';text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="320.358"
+         y="422.668"
+         id="text3485"><tspan
+           x="320.358"
+           y="422.668"
+           id="tspan3483"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold'">Add file/s</tspan></text>
+    </g>
+    <g
+       id="g3493">
+      <line
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         x1="418.707"
+         y1="418.79599"
+         x2="375.401"
+         y2="418.77399"
+         id="line3489" />
+      <polygon
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         points="365.401,418.769 375.398,423.774 375.403,413.774 "
+         id="polygon3491" />
+    </g>
+    <g
+       id="g3499">
+      <line
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         x1="312.92599"
+         y1="439.189"
+         x2="312.83301"
+         y2="456.31601"
+         id="line3495" />
+      <polygon
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         points="312.779,466.316 317.833,456.343 307.833,456.289 "
+         id="polygon3497" />
+    </g>
+    <g
+       id="g3505">
+      <line
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         x1="312.77399"
+         y1="512.91602"
+         x2="312.535"
+         y2="531.263"
+         id="line3501" />
+      <polygon
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         points="312.405,541.262 317.534,531.328 307.535,531.198 "
+         id="polygon3503" />
+    </g>
+    <g
+       id="g3519">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         d="m 251.759,816.062 h 121.188 c 18.178,10.8 24.237,16.2 24.237,27 0,10.8 -6.059,16.2 -24.237,27 H 251.759 c -18.178,-10.8 -24.237,-16.2 -24.237,-27 0,-10.8 6.059,-16.2 24.237,-27 z"
+         id="path3507" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         d="m 372.947,816.062 c -18.179,10.8 -24.238,16.2 -24.238,27 0,10.8 6.059,16.2 24.238,27"
+         id="path3509" />
+      <text
+         font-size="12.8px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif', Normla;-inkscape-font-specification:'CMU Serif, Normla';text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="300.23401"
+         y="831.06201"
+         id="text3517"><tspan
+           x="300.23401"
+           y="831.06201"
+           id="tspan3511"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif', Normla;-inkscape-font-specification:'CMU Serif, Normla'">Store detected</tspan><tspan
+           x="300.23401"
+           y="847.06201"
+           id="tspan3513"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif', Normla;-inkscape-font-specification:'CMU Serif, Normla'">text, file</tspan><tspan
+           x="300.23401"
+           y="863.06201"
+           id="tspan3515"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif', Normla;-inkscape-font-specification:'CMU Serif, Normla'">metadata</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.46667px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold';fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.789998"
+         x="280.12665"
+         y="837.0965"
+         id="text4812"><tspan
+           sodipodi:role="line"
+           id="tspan4810"
+           style="stroke-width:0.79"
+           x="280.12665"
+           y="837.0965"></tspan></text>
+    </g>
+    <g
+       id="g3525">
+      <line
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         x1="312.392"
+         y1="788.26202"
+         x2="312.36801"
+         y2="805.06201"
+         id="line3521" />
+      <polygon
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         points="312.354,815.062 317.368,805.069 307.368,805.055 "
+         id="polygon3523" />
+    </g>
+    <g
+       id="g3539">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         d="m 579.704,540.907 h 131.437 c 19.716,10.8 26.288,16.2 26.288,27 0,10.8 -6.572,16.2 -26.288,27 H 579.704 c -19.716,-10.8 -26.288,-16.2 -26.288,-27 0,-10.8 6.572,-16.2 26.288,-27 z"
+         id="path3527" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         d="m 711.141,540.907 c -19.715,10.8 -26.287,16.2 -26.287,27 0,10.8 6.572,16.2 26.287,27"
+         id="path3529" />
+      <text
+         font-size="12.8px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="632.27899"
+         y="555.90698"
+         id="text3537"><tspan
+           x="632.27899"
+           y="555.90698"
+           id="tspan3531"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'">Access detected</tspan><tspan
+           x="632.27899"
+           y="571.90698"
+           id="tspan3533"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'">text and</tspan><tspan
+           x="632.27899"
+           y="587.90698"
+           id="tspan3535"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'">file metadata</tspan></text>
+    </g>
+    <g
+       id="g3549">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         d="m 584.548,399.743 121.299,-25.687 v 64.217 H 584.548 Z"
+         id="path3541" />
+      <text
+         font-size="12.8px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="645.19702"
+         y="412.89136"
+         id="text3547"><tspan
+           x="645.19702"
+           y="412.89136"
+           id="tspan3543"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'">Input pattern</tspan><tspan
+           x="645.19702"
+           y="428.89136"
+           id="tspan3545"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'">for search</tspan></text>
+    </g>
+    <g
+       id="g3555">
+      <line
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         x1="530.29498"
+         y1="418.79599"
+         x2="573.54797"
+         y2="418.965"
+         id="line3551" />
+      <polygon
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         points="583.548,419.004 573.568,413.965 573.529,423.965 "
+         id="polygon3553" />
+    </g>
+    <g
+       id="g3563">
+      <polygon
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         points="587.748,467.104 703.121,467.104 689.29,505.104 573.917,505.104 "
+         id="polygon3557" />
+      <text
+         font-size="12.8px"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold';text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="638.51898"
+         y="490.004"
+         id="text3561"><tspan
+           x="638.51898"
+           y="490.004"
+           id="tspan3559"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold'">Search Button</tspan></text>
+    </g>
+    <g
+       id="g3569">
+      <line
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         x1="645.19702"
+         y1="438.27301"
+         x2="645.34399"
+         y2="456.10501"
+         id="line3565" />
+      <polygon
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         points="645.426,466.104 650.344,456.063 640.344,456.146 "
+         id="polygon3567" />
+    </g>
+    <g
+       id="g3575">
+      <line
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         x1="645.38397"
+         y1="504.97699"
+         x2="645.41101"
+         y2="529.90698"
+         id="line3571" />
+      <polygon
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         points="645.421,539.907 650.411,529.901 640.411,529.912 "
+         id="polygon3573" />
+    </g>
+    <g
+       id="g3585">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         x="576.39502"
+         y="630.85101"
+         width="138.25"
+         height="54"
+         rx="0"
+         ry="0"
+         id="rect3577" />
+      <text
+         font-size="12.8px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="645.52002"
+         y="653.75098"
+         id="text3583"><tspan
+           x="645.52002"
+           y="653.75098"
+           id="tspan3579"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'">Place all files</tspan><tspan
+           x="645.52002"
+           y="669.75098"
+           id="tspan3581"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'">in queue</tspan></text>
+    </g>
+    <g
+       id="g3591">
+      <line
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         x1="645.422"
+         y1="594.90698"
+         x2="645.48999"
+         y2="619.85101"
+         id="line3587" />
+      <polygon
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         points="645.518,629.851 650.49,619.838 640.49,619.865 "
+         id="polygon3589" />
+    </g>
+    <g
+       id="g3603">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         x="534.48901"
+         y="717.09601"
+         width="221.89999"
+         height="70"
+         rx="0"
+         ry="0"
+         id="rect3593" />
+      <text
+         font-size="12.8px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="645.43903"
+         y="739.99597"
+         id="text3601"><tspan
+           x="645.43903"
+           y="739.99597"
+           id="tspan3595"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'">Execute</tspan><tspan
+           x="645.43903"
+           y="755.99597"
+           id="tspan3597"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'">boyer\_moore\_algo(text, pattern)</tspan><tspan
+           x="645.43903"
+           y="771.99597"
+           id="tspan3599"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'">and dequeue if done</tspan></text>
+    </g>
+    <g
+       id="g3609">
+      <line
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         x1="645.51898"
+         y1="684.85101"
+         x2="645.466"
+         y2="706.09601"
+         id="line3605" />
+      <polygon
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         points="645.441,716.096 650.466,706.108 640.466,706.083 "
+         id="polygon3607" />
+    </g>
+    <g
+       id="g3623">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         x="568.81897"
+         y="818.341"
+         width="153"
+         height="86"
+         rx="0"
+         ry="0"
+         id="rect3611" />
+      <text
+         font-size="12.8px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="645.31897"
+         y="841.24103"
+         id="text3621"><tspan
+           x="645.31897"
+           y="841.24103"
+           id="tspan3613"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'">Index all pattern</tspan><tspan
+           x="645.31897"
+           y="857.24103"
+           id="tspan3615"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'">position in each file</tspan><tspan
+           x="645.31897"
+           y="873.24103"
+           id="tspan3617"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'">and sort according to</tspan><tspan
+           x="645.31897"
+           y="889.24103"
+           id="tspan3619"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'">filetype/name</tspan></text>
+    </g>
+    <g
+       id="g3629">
+      <line
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         x1="645.43903"
+         y1="787.09601"
+         x2="645.36102"
+         y2="807.341"
+         id="line3625" />
+      <polygon
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         points="645.323,817.341 650.361,807.361 640.361,807.322 "
+         id="polygon3627" />
+    </g>
+    <g
+       id="g3639">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         d="m 249.626,467.316 h 126.295 v 45.6 c -25.259,-7.6 -37.889,-7.6 -63.147,0 -25.259,7.6 -37.889,7.6 -63.148,0 z"
+         id="path3631" />
+      <text
+         font-size="12.8px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="312.77399"
+         y="483.37433"
+         id="text3637"><tspan
+           x="312.77399"
+           y="483.37433"
+           id="tspan3633"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'">Select file/s from</tspan><tspan
+           x="312.77399"
+           y="499.37433"
+           id="tspan3635"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'">storage</tspan></text>
+    </g>
+    <g
+       id="g3651">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         d="m 590.284,941.125 h 110.3 c 16.545,13.571 22.06,20.357 22.06,33.928 0,13.571 -5.515,20.356 -22.06,33.927 h -110.3 l -22.06,-33.927 z"
+         id="path3641" />
+      <text
+         font-size="12.8px"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="645.43402"
+         y="963.05298"
+         id="text3649"><tspan
+           x="645.43402"
+           y="963.05298"
+           id="tspan3643"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'">Display position</tspan><tspan
+           x="645.43402"
+           y="979.05298"
+           id="tspan3645"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'">and preview text</tspan><tspan
+           x="645.43402"
+           y="995.05298"
+           id="tspan3647"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif'">with highlight</tspan></text>
+    </g>
+    <g
+       id="g3657">
+      <line
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         x1="645.31897"
+         y1="904.341"
+         x2="645.40002"
+         y2="930.125"
+         id="line3653" />
+      <polygon
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         points="645.431,940.125 650.4,930.109 640.4,930.141 "
+         id="polygon3655" />
+    </g>
+    <g
+       id="g3665">
+      <ellipse
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         cx="381.65302"
+         cy="135.689"
+         rx="20.613199"
+         ry="19.8022"
+         id="ellipse3659" />
+      <text
+         font-size="12.8px"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold';text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="381.65302"
+         y="139.589"
+         id="text3663"><tspan
+           x="381.65302"
+           y="139.589"
+           id="tspan3661"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold'">A</tspan></text>
+    </g>
+    <g
+       id="g3671">
+      <line
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         x1="335.409"
+         y1="182.369"
+         x2="359.422"
+         y2="157.59"
+         id="line3667" />
+      <polygon
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         points="366.381,150.409 355.831,154.111 363.012,161.07 "
+         id="polygon3669" />
+    </g>
+    <g
+       id="g3679">
+      <ellipse
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         cx="474.82599"
+         cy="522.62"
+         rx="20.613199"
+         ry="19.8022"
+         id="ellipse3673" />
+      <text
+         font-size="12.8px"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold';text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="474.82599"
+         y="526.52002"
+         id="text3677"><tspan
+           x="474.82599"
+           y="526.52002"
+           id="tspan3675"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold'">A</tspan></text>
+    </g>
+    <g
+       id="g3685">
+      <line
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         x1="474.50101"
+         y1="472.24899"
+         x2="474.70901"
+         y2="491.819"
+         id="line3681" />
+      <polygon
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         points="474.815,501.818 479.709,491.766 469.709,491.872 "
+         id="polygon3683" />
+    </g>
+    <g
+       id="g3693">
+      <ellipse
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         cx="545.30603"
+         cy="348.20999"
+         rx="20.613199"
+         ry="19.8022"
+         id="ellipse3687" />
+      <text
+         font-size="12.8px"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold';text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="545.30603"
+         y="352.10999"
+         id="text3691"><tspan
+           x="545.30603"
+           y="352.10999"
+           id="tspan3689"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold'">B</tspan></text>
+    </g>
+    <g
+       id="g3701">
+      <ellipse
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         cx="513.58899"
+         cy="975.21051"
+         rx="20.613199"
+         ry="19.8022"
+         id="ellipse3695" />
+      <text
+         font-size="12.8px"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold';text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="513.58899"
+         y="979.11047"
+         id="text3699"><tspan
+           x="513.58899"
+           y="979.11047"
+           id="tspan3697"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold'">B</tspan></text>
+    </g>
+    <g
+       id="g3709">
+      <ellipse
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         cx="312.32199"
+         cy="924.255"
+         rx="20.613199"
+         ry="19.8022"
+         id="ellipse3703" />
+      <text
+         font-size="12.8px"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold';text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="312.32199"
+         y="928.15503"
+         id="text3707"><tspan
+           x="312.32199"
+           y="928.15503"
+           id="tspan3705"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold'">B</tspan></text>
+    </g>
+    <g
+       id="g3715">
+      <line
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         x1="312.353"
+         y1="870.06201"
+         x2="312.332"
+         y2="893.453"
+         id="line3711" />
+      <polygon
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         points="312.323,903.453 317.332,893.458 307.332,893.449 "
+         id="polygon3713" />
+    </g>
+    <g
+       id="g3721">
+      <line
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         x1="568.224"
+         y1="975.05298"
+         x2="545.20203"
+         y2="975.01703"
+         id="line3717" />
+      <polygon
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         points="535.203,975.002 545.195,980.017 545.21,970.017 "
+         id="polygon3719" />
+    </g>
+    <g
+       id="g3727">
+      <line
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         x1="530.73102"
+         y1="362.21201"
+         x2="509.97"
+         y2="384.09"
+         id="line3723" />
+      <polygon
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         points="503.086,391.343 513.597,387.531 506.343,380.648 "
+         id="polygon3725" />
+    </g>
+    <g
+       id="g3735">
+      <polygon
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         points="77.8305,868.549 165.916,868.549 151.051,909.39 62.9656,909.39 "
+         id="polygon3729" />
+      <text
+         font-size="12.8px"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold';text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="114.441"
+         y="892.87"
+         id="text3733"><tspan
+           x="114.441"
+           y="892.87"
+           id="tspan3731"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold'">Exit</tspan></text>
+    </g>
+    <g
+       id="g3743">
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         d="m 80.0074,947.118 h 79.3336 c 10.953,0 19.833,10.297 19.833,23 0,12.702 -8.88,23 -19.833,23 H 80.0074 c -10.9537,0 -19.8333,-10.298 -19.8333,-23 0,-12.703 8.8796,-23 19.8333,-23 z"
+         id="path3737" />
+      <text
+         font-size="12.8px"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold';text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="119.674"
+         y="974.11798"
+         id="text3741"><tspan
+           x="119.674"
+           y="974.11798"
+           id="tspan3739"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold'">STOP</tspan></text>
+    </g>
+    <g
+       id="g3751">
+      <ellipse
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         cx="122.112"
+         cy="811.638"
+         rx="20.613199"
+         ry="19.8022"
+         id="ellipse3745" />
+      <text
+         font-size="12.8px"
+         style="font-style:normal;font-weight:700;font-family:sans-serif;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+         x="122.112"
+         y="815.53802"
+         id="text3749"><tspan
+           x="122.112"
+           y="815.53802"
+           id="tspan3747"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold'">A</tspan></text>
+    </g>
+    <g
+       id="g3757">
+      <line
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         x1="122.112"
+         y1="831.44"
+         x2="121.944"
+         y2="857.54901"
+         id="line3753" />
+      <polygon
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         points="121.88,867.549 126.944,857.582 116.944,857.517 "
+         id="polygon3755" />
+    </g>
+    <g
+       id="g3763">
+      <line
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         x1="119.907"
+         y1="909.90698"
+         x2="119.743"
+         y2="936.11798"
+         id="line3759" />
+      <polygon
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-opacity:1"
+         fill-rule="evenodd"
+         points="119.68,946.118 124.743,936.149 114.743,936.087 "
+         id="polygon3761" />
+    </g>
+  </g>
+</svg>

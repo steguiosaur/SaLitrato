@@ -1,0 +1,33 @@
+\documentclass[a4paper, 12pt]{article}
+\input{preamble.tex}
+
+\begin{document}
+
+    % Title Page
+    \include{cover.tex}
+
+    % Table of Contents
+    \newpage
+    \thispagestyle{plain}
+    \addcontentsline{toc}{section}{Table of Contents}
+    \tableofcontents
+
+    % Contents
+    \newpage
+    \pagestyle{plain}
+    \pagenumbering{arabic}
+    \setcounter{page}{1}
+
+    \include{parts/intro.tex}
+
+    \include{parts/rrl.tex}
+
+    \include{parts/obj.tex}
+
+    \include{parts/scope.tex}
+
+    \include{parts/archi.tex}
+
+    \include{refs.tex}
+
+\end{document}
