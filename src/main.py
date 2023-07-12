@@ -27,7 +27,7 @@ class Main(Tk):
         self.frames[page].tkraise()
 
 
-set_appearance_mode("Light")
+set_appearance_mode("Dark")
 
 app = Main()
 app.title("SaLitrato")
