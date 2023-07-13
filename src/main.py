@@ -14,7 +14,7 @@ class Main(Tk):
         container.grid_columnconfigure(0, weight=1)
 
         self.frames = {}
-        for f in [HomePage, FileMenu]:
+        for f in [HomePage, FileMenu, Previewer]:
             page = f.__name__
             frame = f(container, self)
             frame.grid(row=0, column=0, sticky="NSEW")

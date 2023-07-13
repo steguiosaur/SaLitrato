@@ -15,7 +15,7 @@ class FileMenu(CTkListPage, FileMenuFunc):
             fg_color="#202020",
             anchor="w",
             font=("Verdana", 14, "bold"),
-            command=lambda: print("goto preview"))
+            command=lambda: self.start_search_command(controller))
         self.start_button.grid(row=1, column=0, sticky="we")
 
         self.add_file_button = CTkButton(self.sidebar_frame,
@@ -25,7 +25,7 @@ class FileMenu(CTkListPage, FileMenuFunc):
             fg_color="#202020",
             anchor="w",
             font=("Verdana", 14, "bold"),
-            command=lambda: print("add folder"))
+            command=lambda: self.add_file_command())
         self.add_file_button.grid(row=2, column=0, sticky="we")
 
         self.remove_file_button = CTkButton(self.sidebar_frame,
@@ -35,7 +35,7 @@ class FileMenu(CTkListPage, FileMenuFunc):
             fg_color="#202020",
             anchor="w",
             font=("Verdana", 14, "bold"),
-            command=lambda: print("remove file"))
+            command=lambda: self.remove_file_command())
         self.remove_file_button.grid(row=3, column=0, sticky="we")
 
         self.back_button = CTkButton(self.sidebar_frame,
@@ -52,8 +52,8 @@ class FileMenu(CTkListPage, FileMenuFunc):
         self.list_label_text("Folder: " + text + "/")
         self.current_folder = text
 
-    def start_search_command(self):
-        pass
+    def start_search_command(self, controller):
+        controller.show_frame("Previewer", controller.id)
 
     def remove_file_command(self):
         pass
