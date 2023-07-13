@@ -1,5 +1,5 @@
 from customtkinter import CTkFrame, CTkScrollbar
-from tkinter import ANCHOR, Listbox, SINGLE
+from tkinter import Listbox, SINGLE
 
 class CTkList(CTkFrame):
     def __init__(self, parent, theme="dark", selectmode=SINGLE, **kwargs):
@@ -13,7 +13,7 @@ class CTkList(CTkFrame):
             highlightthickness=0,
             relief="flat",
             bd=0,
-            font=("Source Code", 10))
+            font=("Verdana", 11))
         self.list_style(self.theme)
         self.list_box.pack(side='left', fill='both', expand=True)
 
@@ -54,3 +54,8 @@ class CTkList(CTkFrame):
             # Retrieve the text at the selected index
             selected_text = self.list_box.get(selected_index[0])
             return(selected_text)
+
+    def remove_selected_text(self):
+        selected_index = self.list_box.curselection()
+        if selected_index:
+            self.list_box.delete(selected_index)

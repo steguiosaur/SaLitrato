@@ -11,7 +11,7 @@ class CTkListPage(CTkFrame):
         self.grid_rowconfigure((1, 2, 3), weight=1)
         self.grid_columnconfigure((1, 2 ,3), weight=1)
 
-        self.sidebar_frame = CTkFrame(self, width=200, corner_radius=0)
+        self.sidebar_frame = CTkFrame(self, width=200, corner_radius=0, fg_color='#202020')
         self.sidebar_frame.grid(row=0, column=0, rowspan=4, sticky="nsew")
         self.sidebar_frame.grid_rowconfigure((1, 2, 3), weight=0)
         self.sidebar_frame.grid_rowconfigure(6, weight=1)

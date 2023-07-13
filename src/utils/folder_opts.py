@@ -10,16 +10,18 @@ def create_data_folder():
         return 0
 
 def create_subfolder(subfolder_name):
+    if subfolder_name is None:
+        return 1
     subfolder_path = os.path.join(FOLDER_PATH, subfolder_name)
-
     if not os.path.exists(subfolder_path):
         os.makedirs(subfolder_path)
         return 0
     return 1
 
 def delete_subfolder(subfolder_name):
+    if subfolder_name is None:
+        return 1
     subfolder_path = os.path.join(FOLDER_PATH, subfolder_name)
-
     if os.path.exists(subfolder_path):
         shutil.rmtree(subfolder_path)
         return 0
