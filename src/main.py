@@ -1,7 +1,7 @@
 from customtkinter import CTkFrame, set_appearance_mode
 from tkinter import PhotoImage, Tk
 
-from utils import Assets
+from utils import Assets, folder_opts
 from present import *
 
 class Main(Tk):
@@ -14,13 +14,13 @@ class Main(Tk):
         container.grid_columnconfigure(0, weight=1)
 
         self.frames = {}
-        for f in [HomePage]:
+        for f in [HomePage, FileMenu]:
             page = f.__name__
             frame = f(container, self)
             frame.grid(row=0, column=0, sticky="NSEW")
             self.frames[page] = frame
 
-        self.show_frame
+        self.show_frame("HomePage")
 
     def show_frame(self, page, id=None):
         self.id = id
@@ -28,6 +28,7 @@ class Main(Tk):
 
 
 set_appearance_mode("Dark")
+folder_opts.create_data_folder()
 
 app = Main()
 app.title("SaLitrato")

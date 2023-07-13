@@ -18,16 +18,14 @@ class CTkTreeView(CTkFrame):
             rowheight="20",
             borderwidth=0,
             background="#e1e1e1",
-            foreground="#202020"
-        )
+            foreground="#202020")
         self.style.configure(
             "lightAppearance.Treeview.Heading",
             borderwidth=0,
             relief="flat",
             font=("Roboto", 9, "bold"),
             background="#b1b1b1",
-            foreground="#202020"
-        )
+            foreground="#202020")
 
         # dark theme
         self.style.configure(
@@ -38,16 +36,14 @@ class CTkTreeView(CTkFrame):
             relief="flat",
             borderwidth=0,
             background="#282828",
-            foreground="#d1d1d1"
-        )
+            foreground="#d1d1d1")
         self.style.configure(
             "darkAppearance.Treeview.Heading",
             borderwidth=1,
             relief="flat",
             font=("Roboto", 9, "bold"),
             background="#202020",
-            foreground="#d1d1d1"
-        )
+            foreground="#d1d1d1")
         self.style.layout("lightAppearance.Treeview", [('light Appearance.Treeview.treearea', {'sticky': 'nsew'})])
         self.style.layout("darkAppearance.Treeview", [('light Appearance.Treeview.treearea', {'sticky': 'nsew'})])
 
