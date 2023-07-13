@@ -1,8 +1,13 @@
-from customtkinter import CTkFrame, CTkLabel, CTkImage, CTkButton
+from customtkinter import *
 from PIL import Image
 
 from .ctmwidget import CTkList
 from utils import Assets
+
+def openFolder(parent):
+    new_window = CTkToplevel(parent)
+    new_window.geometry("300x300")
+    new_window.title("Open Folder")
 
 class HomePage(CTkFrame):
     def __init__(self, parent, controller):
@@ -29,7 +34,7 @@ class HomePage(CTkFrame):
             height=50,
             fg_color="#202020",
             font=("Verdana", 16, "bold"),
-            command=lambda: print("folder open"))
+            command=lambda: openFolder(parent))
         self.open_folder_button.grid(row=1, column=0, sticky="we")
 
         self.add_folder_button = CTkButton(self.sidebar_frame,
