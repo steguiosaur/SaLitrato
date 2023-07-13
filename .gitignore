@@ -3,3 +3,4 @@ test/
 docs/latex/output/
 docs/latex/svg-inkscape/
 __pycache__/
+data/

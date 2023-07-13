@@ -1,7 +1,5 @@
-# use get_list_box.insert() to insert value to list
-
 from customtkinter import CTkFrame, CTkScrollbar
-from tkinter import Listbox, SINGLE
+from tkinter import ANCHOR, Listbox, SINGLE
 
 class CTkList(CTkFrame):
     def __init__(self, parent, theme="dark", selectmode=SINGLE, **kwargs):
@@ -19,17 +17,16 @@ class CTkList(CTkFrame):
         self.list_style(self.theme)
         self.list_box.pack(side='left', fill='both', expand=True)
 
-        self.list_box.insert(1, "Test/")
-        self.list_box.insert(2, "Test/")
-        self.list_box.insert(3, "Test/")
-
         self.yScroll = CTkScrollbar(self, orientation="vertical")
         self.yScroll.configure(command=self.list_box.yview)
         self.yScroll.pack(side='right', fill='y', anchor="w")
         self.list_box.configure(yscrollcommand=self.yScroll.set)
 
-    def get_list_box(self):
-        return self.list_box
+    def insert(self, index, text):
+        return self.list_box.insert(index, text)
+
+    def delete(self, first, last):
+        return self.list_box.delete(first, last)
 
     def change_theme(self, new_theme):
         self.theme = new_theme
@@ -49,3 +46,11 @@ class CTkList(CTkFrame):
                 selectbackground='#202020',
                 selectforeground='#e1e1e1',
                 highlightcolor='#e1e1e1')
+
+    def get_selected_text(self):
+        # Get the index of the selected item
+        selected_index = self.list_box.curselection()
+        if selected_index:
+            # Retrieve the text at the selected index
+            selected_text = self.list_box.get(selected_index[0])
+            return(selected_text)
