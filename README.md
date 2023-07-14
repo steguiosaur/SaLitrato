@@ -22,7 +22,7 @@ Folder-wide image text search
 
 ### Execution
 
-1. Setup python virtual environment
+1. Setup Python virtual environment
     > Skip this part if system packages does not break on `pip` installs.
 
     ```sh

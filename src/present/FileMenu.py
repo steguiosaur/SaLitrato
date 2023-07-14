@@ -1,5 +1,5 @@
 from tkinter import END
-from customtkinter import CTkButton
+from customtkinter import CTkButton, CTkProgressBar
 
 from functions import FileMenuFunc
 from .ctmwidget import CTkListPage
@@ -57,11 +57,17 @@ class FileMenu(CTkListPage, FileMenuFunc):
         controller.show_frame("Previewer", controller.id)
 
     def add_image_command(self):
+        self.progressbar = CTkProgressBar(self.list_frame, orientation="horizontal", mode="indeterminate")
+        self.progressbar.grid(row=4, column=0, rowspan=4, sticky="ew")
+        self.progressbar.start()
         self.add_file_event(self.controller.get_cur_folder())
         self.refresh_file_list()
+        self.progressbar.stop()
+        self.progressbar.destroy()
 
     def remove_image_command(self):
-        pass
+        self.remove_file_event(self.controller.get_cur_folder(), self.list_list.get_selected_text())
+        self.list_list.remove_selected_text()
 
     def return_home_command(self, controller):
         controller.show_frame("HomePage", controller.id)
