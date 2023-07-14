@@ -55,10 +55,15 @@ class HomePage(CTkListPage, HomePageFunc):
 
     def refresh_folder_list(self):
         self.list_list.delete(0, END)
-        for folder in folder_opts.get_folders():
-            self.list_list.insert(END, folder)
+        folders = folder_opts.get_folders()
+        if folders is not None:
+            folders.sort()
+            for folder in folders:
+                self.list_list.insert(END, folder)
 
     def remove_folder_command(self):
+        if hasattr(self, "add_folder_dialog") and self.add_folder_dialog.winfo_exists():
+            return
         self.remove_folder_event(self.list_list.get_selected_text())
         self.list_list.remove_selected_text()
 
@@ -74,6 +79,10 @@ class HomePage(CTkListPage, HomePageFunc):
         self.add_folder_dialog.grid(row=0, column=0, rowspan=2, columnspan=1, sticky="nsew")
 
     def open_folder_command(self, controller):
+        if hasattr(self, "add_folder_dialog") and self.add_folder_dialog.winfo_exists():
+            return
         if self.list_list.get_selected_text() is not None:
-            self.controller.frames["FileMenu"].read_current_folder(self.list_list.get_selected_text())
+            self.controller.set_cur_folder(self.list_list.get_selected_text())
+            self.controller.frames["FileMenu"].read_current_folder(self.controller.get_cur_folder())
+            self.controller.frames["FileMenu"].refresh_file_list()
             controller.show_frame("FileMenu", controller.id)

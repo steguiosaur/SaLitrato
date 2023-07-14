@@ -6,8 +6,8 @@ class FileMenuFunc():
 
         self.current_folder = None
 
-    def add_file_event(self):
-        pass
+    def add_file_event(self, current_folder):
+        file_opts.get_path_image(current_folder)
 
     def remove_file_event(self):
         pass

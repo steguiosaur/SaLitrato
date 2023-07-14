@@ -8,6 +8,8 @@ class Main(Tk):
     def __init__(self):
         super().__init__()
 
+        self.cur_folder = None
+
         container = CTkFrame(self)
         container.pack(side="top", fill="both", expand=True)
         container.grid_rowconfigure(0, weight=1)
@@ -26,6 +28,11 @@ class Main(Tk):
         self.id = id
         self.frames[page].tkraise()
 
+    def get_cur_folder(self):
+        return self.cur_folder
+
+    def set_cur_folder(self, folder):
+        self.cur_folder = folder
 
 set_appearance_mode("Dark")
 folder_opts.create_data_folder()
