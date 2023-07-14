@@ -1,10 +1,12 @@
+import os
+
+from pytesseract import image_to_string
 from PIL import Image
-from pytesseract import *
 
-img_path = "insert path file"
-img_name = "insert image name"
-img_text = image_to_string(Image.open(img_path))
-print(img_text)
+DATA_FOLDER = "data"
+FOLDER_PATH = os.path.join(os.getcwd(), DATA_FOLDER)
 
-with open(img_name+".txt", mode="w") as f:
-    f.write(img_text)
+def convert_to_text(current_dir, image_file):
+    image_path = os.path.join(FOLDER_PATH, current_dir, image_file)
+    with open(image_file + ".txt", mode="w") as f:
+        f.write(image_to_string(Image.open(image_path)))

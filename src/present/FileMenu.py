@@ -18,25 +18,25 @@ class FileMenu(CTkListPage, FileMenuFunc):
             command=lambda: self.start_search_command(controller))
         self.start_button.grid(row=1, column=0, sticky="we")
 
-        self.add_file_button = CTkButton(self.sidebar_frame,
-            text="       ADD FILE",
+        self.add_image_button = CTkButton(self.sidebar_frame,
+            text="       ADD IMAGE",
             corner_radius=0,
             height=50,
             fg_color="#202020",
             anchor="w",
             font=("Verdana", 14, "bold"),
-            command=lambda: self.add_file_command())
-        self.add_file_button.grid(row=2, column=0, sticky="we")
+            command=lambda: self.add_image_command())
+        self.add_image_button.grid(row=2, column=0, sticky="we")
 
-        self.remove_file_button = CTkButton(self.sidebar_frame,
-            text="       REMOVE FILE",
+        self.remove_image_button = CTkButton(self.sidebar_frame,
+            text="       REMOVE IMAGE",
             corner_radius=0,
             height=50,
             fg_color="#202020",
             anchor="w",
             font=("Verdana", 14, "bold"),
-            command=lambda: self.remove_file_command())
-        self.remove_file_button.grid(row=3, column=0, sticky="we")
+            command=lambda: self.remove_image_command())
+        self.remove_image_button.grid(row=3, column=0, sticky="we")
 
         self.back_button = CTkButton(self.sidebar_frame,
             text="       BACK",
@@ -55,11 +55,12 @@ class FileMenu(CTkListPage, FileMenuFunc):
     def start_search_command(self, controller):
         controller.show_frame("Previewer", controller.id)
 
-    def remove_file_command(self):
+    def add_image_command(self):
         pass
 
-    def add_file_command(self):
+    def remove_image_command(self):
         pass
 
     def return_home_command(self, controller):
         controller.show_frame("HomePage", controller.id)
+        self.current_folder = None

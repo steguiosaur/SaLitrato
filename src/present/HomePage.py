@@ -1,7 +1,7 @@
 from tkinter import END
 from customtkinter import CTkButton
 
-from .ctmwidget import CTkListPage
+from .ctmwidget import CTkListPage, CTkInputBox
 from functions import HomePageFunc
 from utils import folder_opts
 
@@ -62,9 +62,16 @@ class HomePage(CTkListPage, HomePageFunc):
         self.remove_folder_event(self.list_list.get_selected_text())
         self.list_list.remove_selected_text()
 
-    def add_folder_command(self):
-        self.add_folder_dialog_event()
+    def create_folder_callback(self, folder_name):
+        self.add_folder_event(folder_name)
         self.refresh_folder_list()
+
+    def add_folder_command(self):
+        if hasattr(self, "add_folder_dialog") and self.add_folder_dialog.winfo_exists():
+            return
+        self.add_folder_dialog = CTkInputBox(self.list_frame, text="Create Folder", corner_radius=5,
+            ok_command=lambda: self.create_folder_callback(self.add_folder_dialog.get_input()))
+        self.add_folder_dialog.grid(row=0, column=0, rowspan=2, columnspan=1, sticky="nsew")
 
     def open_folder_command(self, controller):
         if self.list_list.get_selected_text() is not None:
