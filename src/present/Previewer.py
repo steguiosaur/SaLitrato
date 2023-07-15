@@ -1,8 +1,8 @@
 from customtkinter import CTkFrame, CTkEntry, CTkImage, CTkLabel, CTkButton, CTkTextbox
 from PIL import Image
 
-from utils import Assets
-from .ctmwidget import CTkList
+from utils import Assets, file_opts
+from .ctmwidget import CTkList, ImagePreview
 
 class Previewer(CTkFrame):
     def __init__(self, parent, controller):
@@ -28,7 +28,9 @@ class Previewer(CTkFrame):
         self.search_entry.grid(row=1, column=0, padx=25, pady=(0, 15), sticky="ew")
 
         self.position_list = CTkList(self.sidebar_frame)
-        self.position_list.grid(row=2, column=0, rowspan=5, sticky="nsew")
+        self.position_list.grid(row=2, column=0, rowspan=5, padx=(10, 0), sticky="nsew")
+        self.listbox = self.position_list.listbox_instance()
+        self.listbox.bind('<<ListboxSelect>>', lambda event: self.position_list_selected(event))
 
         self.back_button = CTkButton(self.sidebar_frame,
             text="       BACK",
@@ -42,6 +44,11 @@ class Previewer(CTkFrame):
 
         self.image_preview_frame = CTkFrame(self)
         self.image_preview_frame.grid(row=0, column=1, rowspan=3, columnspan=3, padx=15, pady=15, sticky="nsew")
+        self.image_preview_frame.rowconfigure(0, weight=1)
+        self.image_preview_frame.columnconfigure(0, weight=1)
+
+        self.image_view = ImagePreview(self.image_preview_frame, image_path=self.read_cursor_filepath())
+        self.image_view.grid(row=0, column=0, padx=10, pady=10, sticky="nsew")
 
         self.image_info_frame = CTkFrame(self)
         self.image_info_frame.grid(row=0, column=4, rowspan=3, padx=(0, 15), pady=15, sticky="nsew")
@@ -51,3 +58,10 @@ class Previewer(CTkFrame):
 
     def return_filemenu_command(self, controller):
         controller.show_frame("FileMenu", controller.id)
+
+    def position_list_selected(self, event):
+        print("list presss")
+        pass
+
+    def read_cursor_filepath(self):
+        return file_opts.get_file_path_from_csv(None, None)

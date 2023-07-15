@@ -82,6 +82,7 @@ class FileMenu(CTkListPage, FileMenuFunc):
     def start_search_command(self, controller):
         if hasattr(self, "add_image_command") and hasattr(self, "progressbar") and self.progressbar.winfo_exists():
             return
+        self.focus_set()
         controller.show_frame("Previewer", controller.id)
 
     def add_image_command(self):
@@ -100,6 +101,7 @@ class FileMenu(CTkListPage, FileMenuFunc):
     def return_home_command(self, controller):
         if hasattr(self, "add_image_command") and hasattr(self, "progressbar") and self.progressbar.winfo_exists():
             return
+        self.image_view.update_image(self.get_file_path_event(None, None))
         controller.show_frame("HomePage", controller.id)
         self.controller.set_cur_folder(None)
 
