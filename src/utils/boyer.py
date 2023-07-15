@@ -53,3 +53,4 @@ def get_matched_positions(text, pattern):
             shift += max(1, j - bad_char[ord(text[shift + j].lower())])
 
     return matched_positions
+

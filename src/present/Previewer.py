@@ -1,4 +1,4 @@
-from customtkinter import CTkFrame, CTkEntry, CTkImage, CTkLabel, CTkButton, CTkTextbox
+from customtkinter import END, CTkFrame, CTkEntry, CTkImage, CTkLabel, CTkButton, CTkTextbox
 from PIL import Image
 
 from utils import Assets, file_opts
@@ -26,6 +26,7 @@ class Previewer(CTkFrame):
 
         self.search_entry = CTkEntry(self.sidebar_frame, placeholder_text="Search pattern")
         self.search_entry.grid(row=1, column=0, padx=25, pady=(0, 15), sticky="ew")
+        self.search_entry.bind("<KeyRelease>", lambda event: self.search_entry_changed(event))
 
         self.position_list = CTkList(self.sidebar_frame)
         self.position_list.grid(row=2, column=0, rowspan=5, padx=(10, 0), sticky="nsew")
@@ -57,11 +58,27 @@ class Previewer(CTkFrame):
         self.text_preview_frame.grid(row=3, column=1, rowspan=1, columnspan=4, padx=15, pady=(0, 15), sticky="nsew")
 
     def return_filemenu_command(self, controller):
+        self.focus_set()
         controller.show_frame("FileMenu", controller.id)
-
-    def position_list_selected(self, event):
-        print("list presss")
-        pass
+        self.search_entry.delete(0, END)
 
     def read_cursor_filepath(self):
         return file_opts.get_file_path_from_csv(None, None)
+
+    def position_list_selected(self, event):
+        print("list key pressed")
+        # open filename.img.txt and put in textbox
+        # send the index position to a highlight function
+        # open the path of image to put on image_preview
+
+    def search_entry_changed(self, event):
+        search_pattern = self.search_entry.get()
+        if search_pattern:
+            print(search_pattern)
+            # put the pattern in bad char heuristic
+            # run function for search
+            # display the result in list with format (filename.img:row:col: -> allrow)
+            # update the list
+
+    def load_data_structure(self):
+        pass

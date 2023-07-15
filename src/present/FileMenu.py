@@ -1,5 +1,4 @@
-from tkinter import END
-from customtkinter import CTkButton, CTkFrame, CTkLabel, CTkProgressBar
+from customtkinter import CTkButton, CTkFrame, CTkLabel, CTkProgressBar, END
 
 from functions import FileMenuFunc
 from .ctmwidget import CTkListPage, ImagePreview

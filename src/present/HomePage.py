@@ -1,5 +1,4 @@
-from tkinter import END
-from customtkinter import CTkButton
+from customtkinter import CTkButton, END
 
 from .ctmwidget import CTkListPage, CTkInputBox
 from functions import HomePageFunc
