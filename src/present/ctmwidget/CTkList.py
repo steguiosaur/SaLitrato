@@ -2,11 +2,12 @@ from customtkinter import CTkFrame, CTkScrollbar
 from tkinter import Listbox, SINGLE
 
 class CTkList(CTkFrame):
-    def __init__(self, parent, theme="dark", selectmode=SINGLE, **kwargs):
+    def __init__(self, parent, theme="dark", selectmode=SINGLE, command=None, **kwargs):
         super().__init__(parent, **kwargs)
 
         self.theme = theme
         self.selectmode = selectmode
+        self.command = command
 
         self.list_box = Listbox(self,
             selectmode=self.selectmode,
@@ -21,6 +22,9 @@ class CTkList(CTkFrame):
         self.yScroll.configure(command=self.list_box.yview)
         self.yScroll.pack(side='right', fill='y', anchor="w")
         self.list_box.configure(yscrollcommand=self.yScroll.set)
+
+    def listbox_instance(self):
+        return self.list_box
 
     def insert(self, index, text):
         return self.list_box.insert(index, text)
@@ -59,3 +63,7 @@ class CTkList(CTkFrame):
         selected_index = self.list_box.curselection()
         if selected_index:
             self.list_box.delete(selected_index)
+
+    def configure(self, **kwargs):
+        if 'command' in kwargs:
+            self.command = kwargs['command']

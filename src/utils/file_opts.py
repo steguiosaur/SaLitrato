@@ -5,6 +5,8 @@ import os
 from pytesseract import image_to_string
 from PIL import Image
 
+from .assets import Assets
+
 DATA_FOLDER = "data"
 FOLDER_PATH = os.path.join(os.getcwd(), DATA_FOLDER)
 SUPPORTED_FORMATS = {'.png', '.jpg', '.jpeg', '.jiff', '.pjpeg', '.pjp', '.jp2', '.tiff', '.gif', '.webp', '.bmp', '.pnm'}
@@ -77,7 +79,7 @@ def get_all_imgfiles(current_folder):
     return [(item['file_key'], item['file_name']) for item in data]
 
 def delete_row_by_key(current_dir, img_name):
-    if current_dir is None:
+    if current_dir is None or img_name is None:
         return
 
     output_path = os.path.join(FOLDER_PATH, current_dir, img_name + ".txt")
@@ -91,3 +93,21 @@ def delete_row_by_key(current_dir, img_name):
     data = [row for row in data if row['file_name'] != img_name]
 
     write_csv(csv_path, data)
+
+def get_file_path_from_csv(current_dir, file_name):
+    if current_dir is None and file_name is None:
+        return Assets.asset_path("./salitrato_icon.png")
+
+    output_path = os.path.join(FOLDER_PATH, current_dir, file_name)
+    if os.path.exists(output_path):
+        os.remove(output_path)
+
+    subfolder_path = os.path.join(FOLDER_PATH, current_dir)
+    csv_path = os.path.join(subfolder_path, current_dir + ".csv")
+    if subfolder_path is not None:
+        with open(csv_path, 'r') as file:
+            reader = csv.DictReader(file)
+            for row in reader:
+                if row['file_name'] == file_name:
+                    return row['file_path']
+    return Assets.asset_path("./salitrato_icon.png")

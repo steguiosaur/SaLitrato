@@ -19,15 +19,15 @@ def create_badchar_array(string, size):
 
 # Uses Boyer-Moore Algorithm to find all index position of pattern in the text
 def get_indexpos_array(text, pattern):
+    matched_position = []
     lp = len(pattern)
     lt = len(text)
 
-    # set maximum char limit
-    if lp > NO_OF_CHARS:
-        return 1
+    # set minimum length for pattern search
+    if lp < 1:
+        return matched_position
 
     # collect all text occurrence
-    matched_position = []
 
     # create bad character list
     bad_char = create_badchar_array(pattern, lp)

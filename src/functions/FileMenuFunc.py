@@ -9,3 +9,6 @@ class FileMenuFunc():
 
     def remove_file_event(self, current_dir, img_name):
         file_opts.delete_row_by_key(current_dir, img_name)
+
+    def get_file_path_event(self, current_dir, img_name):
+        return file_opts.get_file_path_from_csv(current_dir, img_name)
