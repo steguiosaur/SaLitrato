@@ -50,7 +50,7 @@ class HomePage(CTkListPage, HomePageFunc):
             fg_color="#202020",
             anchor="w",
             font=("Verdana", 14, "bold"),
-            command=lambda: print("exit function"))
+            command=lambda: self.quit())
         self.exit_button.grid(row=7, column=0, sticky="swe")
 
     def refresh_folder_list(self):

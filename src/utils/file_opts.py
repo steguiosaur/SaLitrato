@@ -11,9 +11,9 @@ DATA_FOLDER = "data"
 FOLDER_PATH = os.path.join(os.getcwd(), DATA_FOLDER)
 SUPPORTED_FORMATS = {'.png', '.jpg', '.jpeg', '.jiff', '.pjpeg', '.pjp', '.jp2', '.tiff', '.gif', '.webp', '.bmp', '.pnm'}
 filetypes = (
-    ("All Files", "*.*"),
     ("Image files", "*.png;*.jpeg,;*.jpg"),
-    ("Other Image Files", "*.jiff;*.pjpeg;*.pjp;*.jp2;*.tiff;*.webp;*.bmp;*.pnm")
+    ("Other Image Files", "*.jiff;*.pjpeg;*.pjp;*.jp2;*.tiff;*.webp;*.bmp;*.pnm"),
+    ("All Files", "*.*")
 )
 
 def convert_to_text(current_dir, image_file, image_file_path):
