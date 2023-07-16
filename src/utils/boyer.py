@@ -5,6 +5,8 @@ def set_badchar_array(pattern):
     return table
 
 def boyer_moore(text, pattern, bc_table):
+    pattern = pattern.lower()
+    text = text.lower()
     m = len(pattern)
     n = len(text)
     if m == 0 or n == 0 or n < m:
