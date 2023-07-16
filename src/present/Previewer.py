@@ -95,7 +95,6 @@ class Previewer(CTkFrame, FileData):
             self.refresh_position_list()
             self.listbox.selection_set('0')
             self.position_list_selected(event)
-            print(self.result)
 
     def load_data_structure(self):
         self.set_data_for_process()
