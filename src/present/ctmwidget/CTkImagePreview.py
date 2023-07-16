@@ -2,18 +2,19 @@ from customtkinter import CTkFrame, CTkCanvas
 from PIL import Image, ImageTk
 
 class ImagePreview(CTkFrame):
-    def __init__(self, master, image_path):
+    def __init__(self, master, image_path, res=(200, 200)):
         CTkFrame.__init__(self, master)
         self.master = master
 
         self.configure(fg_color='#202020')
+        self.res = res
 
         # Load the image using PIL
         self.image = Image.open(image_path)
-        self.image.thumbnail((200, 200))  # Limit the maximum size for autoscale
+        self.image.thumbnail(self.res)  # Limit the maximum size for autoscale
 
         self.image_tk = ImageTk.PhotoImage(self.image)
-        self.canvas = CTkCanvas(self, width=self.image.width, height=self.image.height, bd=0,
+        self.canvas = CTkCanvas(self, width=self.res[0], height=self.res[1], bd=0,
                                 bg="#202020", highlightthickness=0)
         self.canvas.create_image(0, 0, anchor="nw", image=self.image_tk)
         self.canvas.pack()
@@ -25,15 +26,23 @@ class ImagePreview(CTkFrame):
         self.canvas.bind("<MouseWheel>", self.zoom)
 
     def autoscale(self, event):
-        # Scale the image to fit within the canvas when the window is resized
+        # Scale the image to fit within the canvas while maintaining aspect ratio
         width = event.width
         height = event.height
 
-        if width < self.image.width or height < self.image.height:
-            self.image.thumbnail((width, height))
-            self.image_tk = ImageTk.PhotoImage(self.image)
-            self.canvas.config(width=self.image.width, height=self.image.height)
-            self.canvas.itemconfig(1, image=self.image_tk)
+        aspect_ratio = self.image.width / self.image.height
+        canvas_ratio = width / height
+
+        if canvas_ratio > aspect_ratio:
+            new_width = int(height * aspect_ratio)
+            new_height = height
+        else:
+            new_width = width
+            new_height = int(width / aspect_ratio)
+
+        self.image_tk = ImageTk.PhotoImage(self.image.resize((new_width, new_height)))
+        self.canvas.config(width=new_width, height=new_height)
+        self.canvas.itemconfig(1, image=self.image_tk)
 
     def zoom(self, event):
         # Zoom the image based on the mouse wheel scroll
@@ -51,8 +60,9 @@ class ImagePreview(CTkFrame):
 
     def update_image(self, image_path):
         self.image = Image.open(image_path)
-        self.image.thumbnail((200, 200))
+        self.image.thumbnail(self.res)
 
         self.image_tk = ImageTk.PhotoImage(self.image)
-        self.canvas.config(width=self.image.width, height=self.image.height)
+        self.canvas.config(width=self.res[0], height=self.res[1])
         self.canvas.itemconfig(1, image=self.image_tk)
+

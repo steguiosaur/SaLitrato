@@ -23,6 +23,9 @@ class FileData():
     def set_current_folder(self, current_folder):
         self.current_folder = current_folder
 
+    def get_current_folder(self):
+        return self.current_folder
+
     def set_data_for_process(self):
         self.data = text_process.process_csv_and_text(self.current_folder)
 

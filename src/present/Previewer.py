@@ -44,19 +44,24 @@ class Previewer(CTkFrame, FileData):
             command=lambda:self.return_filemenu_command(controller))
         self.back_button.grid(row=7, column=0, sticky="swe")
 
-        self.image_preview_frame = CTkFrame(self)
+        self.image_preview_frame = CTkFrame(self, fg_color='#202020')
         self.image_preview_frame.grid(row=0, column=1, rowspan=3, columnspan=3, padx=15, pady=15, sticky="nsew")
         self.image_preview_frame.rowconfigure(0, weight=1)
         self.image_preview_frame.columnconfigure(0, weight=1)
+        self.image_preview_frame.grid_propagate(False)
 
-        self.image_view = ImagePreview(self.image_preview_frame, image_path=self.read_cursor_filepath())
-        self.image_view.grid(row=0, column=0, padx=10, pady=10, sticky="nsew")
+        self.image_view = ImagePreview(self.image_preview_frame,
+                                       image_path=self.get_image_path(None), res=(500, 500))
+        self.image_view.grid(row=0, column=0, padx=10, pady=10, sticky="ew")
 
         self.image_info_frame = CTkFrame(self)
         self.image_info_frame.grid(row=0, column=4, rowspan=3, padx=(0, 15), pady=15, sticky="nsew")
 
         self.text_preview = CTkTextbox(self)
         self.text_preview.grid(row=3, column=1, rowspan=1, columnspan=4, padx=15, pady=(0, 15), sticky="nsew")
+
+    def get_image_path(self, filename):
+        return file_opts.get_file_path_from_csv(self.controller.get_cur_folder(), filename)
 
     def return_filemenu_command(self, controller):
         self.focus_set()
@@ -66,9 +71,6 @@ class Previewer(CTkFrame, FileData):
         self.text_preview.delete("1.0", "end")
         self.reset_data()
 
-    def read_cursor_filepath(self):
-        return file_opts.get_file_path_from_csv(None, None)
-
     def position_list_selected(self, event):
         selection = self.listbox.curselection()
         if selection:
@@ -77,10 +79,9 @@ class Previewer(CTkFrame, FileData):
                 filename, row, index = key
                 if filename is not self.get_current_file:
                     self.load_text_file(filename)
+                    self.image_view.update_image(self.get_image_path(filename))
                     self.set_current_file(filename)
                 self.highlight_position(row, index)
-        # send the index position to a highlight function
-        # open the path of image to put on image_preview
 
     def search_entry_changed(self, event):
         search_pattern = self.search_entry.get()

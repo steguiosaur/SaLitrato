@@ -51,7 +51,7 @@ class FileMenu(CTkListPage, FileMenuFunc):
         self.image_view_label = CTkLabel(self.image_view_frame, text="Image View", font=("Verdana", 12, "bold"))
         self.image_view_label.grid(row=0, column=0, sticky="ew")
 
-        self.image_view = ImagePreview(self.image_view_frame, image_path=self.read_cursor_filepath())
+        self.image_view = ImagePreview(self.image_view_frame, image_path=self.get_image_path(None))
         self.image_view.grid(row=1, column=0, padx=10, pady=(5, 10), sticky="nsew")
 
         self.back_button = CTkButton(self.sidebar_frame,
@@ -70,13 +70,11 @@ class FileMenu(CTkListPage, FileMenuFunc):
     def update_image_by_cursorlist(self, event):
         selection = self.list_list.listbox_instance().curselection()
         if selection:
-            selected_index = selection[0]
-            selected_value = self.list_list.listbox_instance().get(selected_index)
-            image_path = self.get_file_path_event(self.controller.get_cur_folder(), selected_value)
-            self.image_view.update_image(image_path)
+            selected_value = self.list_list.listbox_instance().get(selection[0])
+            self.image_view.update_image(self.get_image_path(selected_value))
 
-    def read_cursor_filepath(self):
-        return self.get_file_path_event(self.controller.get_cur_folder(), self.list_list.get_selected_text())
+    def get_image_path(self, filename):
+        return self.get_file_path_event(self.controller.get_cur_folder(), filename)
 
     def add_image_command(self):
         self.progressbar = CTkProgressBar(self.list_frame, orientation="horizontal", mode="indeterminate")
