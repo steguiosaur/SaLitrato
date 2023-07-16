@@ -111,6 +111,8 @@ class Previewer(CTkFrame, FileData):
                         self.position_list.insert(END, item)
                         self.item_key_map[item_index] = (filename, row, index)
                         item_index += 1
+        if self.result == {}:
+            self.position_list.insert(END, 'Nothing to see here.')
 
     def load_text_file(self, filename):
         contents = text_process.get_text_in_txt(self.current_folder, filename)
