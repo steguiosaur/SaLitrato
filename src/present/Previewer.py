@@ -117,8 +117,8 @@ class Previewer(CTkFrame, FileData):
     def load_text_file(self, filename):
         contents = text_process.get_text_in_txt(self.current_folder, filename)
         try:
-                self.text_preview.delete("1.0", "end")
-                self.text_preview.insert("1.0", contents)
+            self.text_preview.delete("1.0", "end")
+            self.text_preview.insert("1.0", contents)
         except FileNotFoundError:
             print(f"Error: File '{filename}' not found.")
 

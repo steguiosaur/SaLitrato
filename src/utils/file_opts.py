@@ -95,7 +95,7 @@ def delete_row_by_key(current_dir, img_name):
     write_csv(csv_path, data)
 
 def get_file_path_from_csv(current_dir, file_name):
-    default_file_path = Assets.asset_path("./salitrato_icon.png")
+    default_file_path = Assets.asset_path("./no_image.png")
     if not current_dir or not file_name:
         return default_file_path
 
