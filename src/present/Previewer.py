@@ -69,6 +69,7 @@ class Previewer(CTkFrame, FileData):
         self.position_list.delete(0, END)
         self.search_entry.delete(0, END)
         self.text_preview.delete("1.0", "end")
+        self.image_view.update_image(self.get_image_path(None))
         self.reset_data()
 
     def position_list_selected(self, event):
@@ -87,10 +88,13 @@ class Previewer(CTkFrame, FileData):
         search_pattern = self.search_entry.get()
         self.position_list.delete(0, END)
         self.text_preview.delete("1.0", "end")
+        self.image_view.update_image(self.get_image_path(None))
         if search_pattern:
             self.set_bad_character_pattern(search_pattern)
             self.set_match_result(search_pattern)
             self.refresh_position_list()
+            self.listbox.selection_set('0')
+            self.position_list_selected(event)
             print(self.result)
 
     def load_data_structure(self):

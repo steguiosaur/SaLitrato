@@ -95,19 +95,15 @@ def delete_row_by_key(current_dir, img_name):
     write_csv(csv_path, data)
 
 def get_file_path_from_csv(current_dir, file_name):
-    if current_dir is None and file_name is None:
-        return Assets.asset_path("./salitrato_icon.png")
+    default_file_path = Assets.asset_path("./salitrato_icon.png")
+    if not current_dir or not file_name:
+        return default_file_path
 
-    output_path = os.path.join(FOLDER_PATH, current_dir, file_name)
-    if os.path.exists(output_path):
-        os.remove(output_path)
+    csv_path = os.path.join(FOLDER_PATH, current_dir, f"{current_dir}.csv")
+    with open(csv_path, 'r') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            if row['file_name'] == file_name:
+                return row['file_path']
 
-    subfolder_path = os.path.join(FOLDER_PATH, current_dir)
-    csv_path = os.path.join(subfolder_path, current_dir + ".csv")
-    if subfolder_path is not None:
-        with open(csv_path, 'r') as file:
-            reader = csv.DictReader(file)
-            for row in reader:
-                if row['file_name'] == file_name:
-                    return row['file_path']
-    return Assets.asset_path("./salitrato_icon.png")
+    return default_file_path
