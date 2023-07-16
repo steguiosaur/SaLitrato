@@ -69,29 +69,40 @@ class Previewer(CTkFrame, FileData):
         return file_opts.get_file_path_from_csv(None, None)
 
     def position_list_selected(self, event):
-        print("list key pressed")
+        selection = self.listbox.curselection()
+        if selection:
+            item_index = int(selection[0])
+            key = self.item_key_map.get(item_index)
+            if key:
+                filename, row, index = key
+                print("Filename:", filename)
+                print("Row:", row)
+                print("Index:", index)
         # open filename.img.txt and put in textbox
         # send the index position to a highlight function
         # open the path of image to put on image_preview
 
     def search_entry_changed(self, event):
         search_pattern = self.search_entry.get()
+        self.position_list.delete(0, END)
         if search_pattern:
             self.set_bad_character_pattern(search_pattern)
             self.set_match_result(search_pattern)
             self.refresh_position_list()
             print(self.result)
-            # display the result in list with format (filename.img:row:col: -> allrow)
-            # update the list
 
     def load_data_structure(self):
         self.set_data_for_process()
 
     def refresh_position_list(self):
-        self.position_list.delete(0, END)
+        self.item_key_map = {}  # Map item index to key
         if self.result is not None and self.data is not None:
+            item_index = 0
             for filename, matched_rows in self.result.items():
                 for row, indexes in matched_rows.items():
                     for index in indexes:
                         row_text = self.data[filename][row]
-                        self.position_list.insert(END, f"{filename}: {row}: {index}: -> {row_text}")
+                        item = f"{filename}:{row}:{index}: -> {row_text}"
+                        self.position_list.insert(END, item)
+                        self.item_key_map[item_index] = (filename, row, index)
+                        item_index += 1
