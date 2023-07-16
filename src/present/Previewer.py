@@ -2,7 +2,7 @@ from customtkinter import END, CTkFrame, CTkEntry, CTkImage, CTkLabel, CTkButton
 from PIL import Image
 
 from functions import FileData
-from utils import Assets, file_opts
+from utils import Assets, file_opts, text_process
 from .ctmwidget import CTkList, ImagePreview
 
 class Previewer(CTkFrame, FileData):
@@ -55,14 +55,15 @@ class Previewer(CTkFrame, FileData):
         self.image_info_frame = CTkFrame(self)
         self.image_info_frame.grid(row=0, column=4, rowspan=3, padx=(0, 15), pady=15, sticky="nsew")
 
-        self.text_preview_frame = CTkTextbox(self)
-        self.text_preview_frame.grid(row=3, column=1, rowspan=1, columnspan=4, padx=15, pady=(0, 15), sticky="nsew")
+        self.text_preview = CTkTextbox(self)
+        self.text_preview.grid(row=3, column=1, rowspan=1, columnspan=4, padx=15, pady=(0, 15), sticky="nsew")
 
     def return_filemenu_command(self, controller):
         self.focus_set()
         controller.show_frame("FileMenu", controller.id)
         self.position_list.delete(0, END)
         self.search_entry.delete(0, END)
+        self.text_preview.delete("1.0", "end")
         self.reset_data()
 
     def read_cursor_filepath(self):
@@ -71,20 +72,20 @@ class Previewer(CTkFrame, FileData):
     def position_list_selected(self, event):
         selection = self.listbox.curselection()
         if selection:
-            item_index = int(selection[0])
-            key = self.item_key_map.get(item_index)
+            key = self.item_key_map.get(int(selection[0]))
             if key:
                 filename, row, index = key
-                print("Filename:", filename)
-                print("Row:", row)
-                print("Index:", index)
-        # open filename.img.txt and put in textbox
+                if filename is not self.get_current_file:
+                    self.load_text_file(filename)
+                    self.set_current_file(filename)
+                self.highlight_position(row, index)
         # send the index position to a highlight function
         # open the path of image to put on image_preview
 
     def search_entry_changed(self, event):
         search_pattern = self.search_entry.get()
         self.position_list.delete(0, END)
+        self.text_preview.delete("1.0", "end")
         if search_pattern:
             self.set_bad_character_pattern(search_pattern)
             self.set_match_result(search_pattern)
@@ -106,3 +107,18 @@ class Previewer(CTkFrame, FileData):
                         self.position_list.insert(END, item)
                         self.item_key_map[item_index] = (filename, row, index)
                         item_index += 1
+
+    def load_text_file(self, filename):
+        contents = text_process.get_text_in_txt(self.current_folder, filename)
+        try:
+                self.text_preview.delete("1.0", "end")
+                self.text_preview.insert("1.0", contents)
+        except FileNotFoundError:
+            print(f"Error: File '{filename}' not found.")
+
+    def highlight_position(self, row, column):
+        start_index = f"{row + 1}.{column}"
+        end_index = f"{row + 1}.{column + len(self.search_entry.get())}"
+        self.text_preview.tag_config("highlight", background="#e1e1e1", foreground="#202020")
+        self.text_preview.tag_add("highlight", start_index, end_index)
+        self.text_preview.see(start_index)

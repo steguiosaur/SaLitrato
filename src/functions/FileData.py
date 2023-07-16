@@ -6,6 +6,13 @@ class FileData():
         self.data = None
         self.bad_character = None
         self.result = None
+        self.current_file = None
+
+    def set_current_file(self, file):
+        self.current_file = file
+
+    def get_current_file(self):
+        return self.current_file
 
     def reset_data(self):
         self.data = None
@@ -21,9 +28,6 @@ class FileData():
 
     def set_match_result(self, pattern):
         self.result = text_process.find_pattern_in_data(self.data, pattern, self.bad_character)
-
-    def get_match_result(self):
-        return self.result
 
     def set_bad_character_pattern(self, pattern):
         self.bad_character = boyer.set_badchar_array(pattern)

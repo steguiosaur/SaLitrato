@@ -48,3 +48,11 @@ def find_pattern_in_data(data, pattern, bad_char):
             result[filename] = matched_rows
 
     return result
+
+def get_text_in_txt(current_folder, file):
+    if current_folder is None: return
+    subfolder_path = os.path.join(FOLDER_PATH, current_folder)
+    filepath = os.path.join(subfolder_path, file + ".txt")
+    with open(filepath, "r") as file:
+        contents = file.read()
+        return contents
