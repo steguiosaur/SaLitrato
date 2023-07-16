@@ -1,10 +1,11 @@
 from customtkinter import END, CTkFrame, CTkEntry, CTkImage, CTkLabel, CTkButton, CTkTextbox
 from PIL import Image
 
+from functions import FileData
 from utils import Assets, file_opts
 from .ctmwidget import CTkList, ImagePreview
 
-class Previewer(CTkFrame):
+class Previewer(CTkFrame, FileData):
     def __init__(self, parent, controller):
         self.controller = controller
         CTkFrame.__init__(self, parent)
@@ -61,6 +62,7 @@ class Previewer(CTkFrame):
         self.focus_set()
         controller.show_frame("FileMenu", controller.id)
         self.search_entry.delete(0, END)
+        self.reset_data()
 
     def read_cursor_filepath(self):
         return file_opts.get_file_path_from_csv(None, None)
@@ -74,11 +76,11 @@ class Previewer(CTkFrame):
     def search_entry_changed(self, event):
         search_pattern = self.search_entry.get()
         if search_pattern:
-            print(search_pattern)
-            # put the pattern in bad char heuristic
-            # run function for search
+            self.set_bad_character_pattern(search_pattern)
+            self.set_match_result(search_pattern)
+            print(self.result)
             # display the result in list with format (filename.img:row:col: -> allrow)
             # update the list
 
     def load_data_structure(self):
-        pass
+        self.set_data_for_process()

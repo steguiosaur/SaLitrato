@@ -6,7 +6,6 @@ from pytesseract import image_to_string
 from PIL import Image
 
 from .assets import Assets
-from .boyer import get_matched_positions
 
 DATA_FOLDER = "data"
 FOLDER_PATH = os.path.join(os.getcwd(), DATA_FOLDER)
@@ -112,23 +111,3 @@ def get_file_path_from_csv(current_dir, file_name):
                 if row['file_name'] == file_name:
                     return row['file_path']
     return Assets.asset_path("./salitrato_icon.png")
-
-def get_all_text_files(current_dir):
-    subfolder_path = os.path.join(FOLDER_PATH, current_dir)
-    text_dict = {}
-    if os.path.exists(subfolder_path):
-        for file in os.listdir(subfolder_path):
-            file_path = os.path.join(subfolder_path, file)
-            if os.path.isfile(file_path) and file.endswith('.txt'):
-                with open(file_path, 'r') as fileprocess:
-                    lines = fileprocess.readlines()
-                    text_dict[file] = lines
-    return text_dict
-
-
-# requires relocation
-def access_text_infile(array, pattern):
-    for file_name, lines in array.items():
-        # Process the lines of text in the file
-        for line in lines:
-            print(file_name + ": " + str(get_matched_positions(line, pattern)) + " " + line)

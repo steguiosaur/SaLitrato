@@ -78,12 +78,6 @@ class FileMenu(CTkListPage, FileMenuFunc):
     def read_cursor_filepath(self):
         return self.get_file_path_event(self.controller.get_cur_folder(), self.list_list.get_selected_text())
 
-    def start_search_command(self, controller):
-        if hasattr(self, "add_image_command") and hasattr(self, "progressbar") and self.progressbar.winfo_exists():
-            return
-        self.focus_set()
-        controller.show_frame("Previewer", controller.id)
-
     def add_image_command(self):
         self.progressbar = CTkProgressBar(self.list_frame, orientation="horizontal", mode="indeterminate")
         self.progressbar.grid(row=4, column=0, rowspan=4, sticky="ew")
@@ -103,6 +97,14 @@ class FileMenu(CTkListPage, FileMenuFunc):
         self.image_view.update_image(self.get_file_path_event(None, None))
         controller.show_frame("HomePage", controller.id)
         self.controller.set_cur_folder(None)
+
+    def start_search_command(self, controller):
+        if hasattr(self, "add_image_command") and hasattr(self, "progressbar") and self.progressbar.winfo_exists():
+            return
+        self.focus_set()
+        self.controller.frames["Previewer"].set_current_folder(self.controller.get_cur_folder())
+        self.controller.frames["Previewer"].load_data_structure()
+        controller.show_frame("Previewer", controller.id)
 
     def refresh_file_list(self):
         self.list_list.delete(0, END)
