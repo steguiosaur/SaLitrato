@@ -10,7 +10,6 @@ class FileData():
     def reset_data(self):
         self.data = None
         self.result = None
-        self.pattern = None
         self.bad_character = None
         self.current_folder = None
 

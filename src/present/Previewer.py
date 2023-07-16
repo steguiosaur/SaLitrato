@@ -29,7 +29,7 @@ class Previewer(CTkFrame, FileData):
         self.search_entry.grid(row=1, column=0, padx=25, pady=(0, 15), sticky="ew")
         self.search_entry.bind("<KeyRelease>", lambda event: self.search_entry_changed(event))
 
-        self.position_list = CTkList(self.sidebar_frame)
+        self.position_list = CTkList(self.sidebar_frame, xscroll=True, font_size=9)
         self.position_list.grid(row=2, column=0, rowspan=5, padx=(10, 0), sticky="nsew")
         self.listbox = self.position_list.listbox_instance()
         self.listbox.bind('<<ListboxSelect>>', lambda event: self.position_list_selected(event))
@@ -61,6 +61,7 @@ class Previewer(CTkFrame, FileData):
     def return_filemenu_command(self, controller):
         self.focus_set()
         controller.show_frame("FileMenu", controller.id)
+        self.position_list.delete(0, END)
         self.search_entry.delete(0, END)
         self.reset_data()
 
@@ -78,9 +79,19 @@ class Previewer(CTkFrame, FileData):
         if search_pattern:
             self.set_bad_character_pattern(search_pattern)
             self.set_match_result(search_pattern)
+            self.refresh_position_list()
             print(self.result)
             # display the result in list with format (filename.img:row:col: -> allrow)
             # update the list
 
     def load_data_structure(self):
         self.set_data_for_process()
+
+    def refresh_position_list(self):
+        self.position_list.delete(0, END)
+        if self.result is not None and self.data is not None:
+            for filename, matched_rows in self.result.items():
+                for row, indexes in matched_rows.items():
+                    for index in indexes:
+                        row_text = self.data[filename][row]
+                        self.position_list.insert(END, f"{filename}: {row}: {index}: -> {row_text}")

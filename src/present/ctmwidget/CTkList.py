@@ -2,26 +2,38 @@ from customtkinter import CTkFrame, CTkScrollbar
 from tkinter import Listbox, SINGLE
 
 class CTkList(CTkFrame):
-    def __init__(self, parent, theme="dark", selectmode=SINGLE, command=None, **kwargs):
+    def __init__(self, parent, theme="dark", selectmode=SINGLE, command=None, xscroll=False,
+                 font_size=11, **kwargs):
         super().__init__(parent, **kwargs)
 
         self.theme = theme
         self.selectmode = selectmode
         self.command = command
+        self.xscroll = xscroll
+        self.font_size = font_size
+
+        self.rowconfigure(0, weight=1)
+        self.columnconfigure(0, weight=1)
 
         self.list_box = Listbox(self,
             selectmode=self.selectmode,
             highlightthickness=0,
             relief="flat",
             bd=0,
-            font=("Verdana", 11))
+            font=("Verdana", self.font_size))
         self.list_style(self.theme)
-        self.list_box.pack(side='left', fill='both', expand=True)
+        self.list_box.grid(row=0, column=0, sticky="nsew")
 
         self.yScroll = CTkScrollbar(self, orientation="vertical")
         self.yScroll.configure(command=self.list_box.yview)
-        self.yScroll.pack(side='right', fill='y', anchor="w")
+        self.yScroll.grid(row=0, column=1, sticky="ns")
         self.list_box.configure(yscrollcommand=self.yScroll.set)
+
+        if self.xscroll:
+            self.xScroll = CTkScrollbar(self, orientation="horizontal")
+            self.xScroll.configure(command=self.list_box.xview)
+            self.xScroll.grid(row=1, column=0, sticky="ew")
+            self.list_box.configure(xscrollcommand=self.xScroll.set)
 
     def listbox_instance(self):
         return self.list_box
