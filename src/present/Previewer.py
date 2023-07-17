@@ -46,13 +46,13 @@ class Previewer(CTkFrame, FileData):
 
         self.image_preview_frame = CTkFrame(self, fg_color='#202020')
         self.image_preview_frame.grid(row=0, column=1, rowspan=3, columnspan=3, padx=15, pady=15, sticky="nsew")
-        self.image_preview_frame.rowconfigure(0, weight=1)
-        self.image_preview_frame.columnconfigure(0, weight=1)
+        self.image_preview_frame.rowconfigure((0,2), weight=1)
+        self.image_preview_frame.columnconfigure((0,2), weight=1)
         self.image_preview_frame.grid_propagate(False)
 
         self.image_view = ImagePreview(self.image_preview_frame,
                                        image_path=self.get_image_path(None), res=(500, 500))
-        self.image_view.grid(row=0, column=0, padx=10, pady=10, sticky="ew")
+        self.image_view.grid(row=0, column=0, padx=10, pady=10, sticky="news")
 
         self.image_info_frame = CTkFrame(self)
         self.image_info_frame.grid(row=0, column=4, rowspan=3, padx=(0, 15), pady=15, sticky="nsew")
