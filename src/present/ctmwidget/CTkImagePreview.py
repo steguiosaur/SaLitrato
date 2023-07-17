@@ -23,7 +23,7 @@ class ImagePreview(CTkFrame):
         self.bind("<Configure>", self.autoscale)
 
         # Enable zoom on mouse wheel scroll
-        self.canvas.bind("<MouseWheel>", self.zoom)
+        #self.canvas.bind("<MouseWheel>", self.zoom)
 
     def autoscale(self, event):
         # Scale the image to fit within the canvas while maintaining aspect ratio
