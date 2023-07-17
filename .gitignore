@@ -4,3 +4,4 @@ doc/latex/output/
 doc/latex/svg-inkscape/
 __pycache__/
 data/
+indent.log
