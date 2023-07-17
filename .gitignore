@@ -1,6 +1,6 @@
 venv/
 test/
-docs/latex/output/
-docs/latex/svg-inkscape/
+doc/latex/output/
+doc/latex/svg-inkscape/
 __pycache__/
 data/
