@@ -2,7 +2,7 @@ def set_badchar_array(pattern):
     table = {}      # creates dictionary of pattern for bad char processing
     for index in range(len(pattern)):
         table[pattern[index]] = index
-    return table    # {'p':1,'a':2,'t':3,'t':4,'e':5,'r':6,'n':7}
+    return table    # {'p':0,'a':1,'t':2,'t':3,'e':4,'r':5,'n':6}
 
 def boyer_moore(text, pattern, bc_table):
     len_pattern = len(pattern)
@@ -23,9 +23,7 @@ def boyer_moore(text, pattern, bc_table):
             cur_index -= 1  # iterate backwards
         if cur_index < 0:   # pattern is matched if cur_index is negative
             positions.append(shift) # put index in positions list
-            # shift by the length of pattern or shift only 1 if it exceeds the text length
-            shift += (len_pattern - bc_table.get(text[shift + len_pattern], -1)
-                if shift + len_pattern < len_text else 1)   # this prevents IndexError
+            shift += len_pattern # entirely shift the pattern
         else:
             # bc_table.get() retrieves value associated with character using text[shift + cur_index]
             # as key, returning the rightmost occurrence of the character. Being reduced by
