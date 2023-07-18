@@ -28,7 +28,7 @@ Lastly it will undertake a two-pass procedure using an adaptive classifier to en
 \section*{System Architecture}
 
 \hspace\parindent
-This software is built using a modular, object-oriented structure with focus on readability,
+This software is built using a modular, object-oriented approach with focus on readability,
 maintainability, and extensibility. It follows the traditional \texttt{layered architecture}, with
 several layers managing the user interface, application logic, and system interactions.
 
@@ -42,9 +42,10 @@ several layers managing the user interface, application logic, and system intera
 \section*{Data Storage Design}
 
 \hspace\parindent
-On initial start of the application, the user is met with selection of add, remove, or open a
-folder. Created folders are stored in current working directory (\texttt{\$CWD}) of where 
-the application was executed, specifically located at \texttt{\$CWD/data/$<$folder\_name$>$}.
+On initial start of the application, the user is met with the selection of add, open, and remove
+folder. Every folder created is stored in the current working directory (\texttt{\$CWD}) of where 
+the application was executed. This specifically appears on the \texttt{data/} folder which
+can be located at \texttt{\$CWD/data/$<$folder\_name$>$}.
 Inside \texttt{\$CWD/data/$<$folder\_name$>$}, is where the extracted text from an image will be
 stored. The CSV file is also generated here replicating the name of its current folder 
 (\texttt{$<$folder\_name$>$.csv}). This acts as a database of current selected image files to 

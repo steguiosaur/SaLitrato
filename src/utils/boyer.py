@@ -1,29 +1,35 @@
 def set_badchar_array(pattern):
-    table = {}
-    for i in range(len(pattern)):
-        table[pattern[i]] = i
-    return table
+    table = {}      # creates dictionary of pattern for bad char processing
+    for index in range(len(pattern)):
+        table[pattern[index]] = index
+    return table    # {'p':1,'a':2,'t':3,'t':4,'e':5,'r':6,'n':7}
 
 def boyer_moore(text, pattern, bc_table):
-    pattern = pattern.lower()
-    text = text.lower()
-    m = len(pattern)
-    n = len(text)
-    if m == 0 or n == 0 or n < m:
+    len_pattern = len(pattern)
+    len_text = len(text)
+
+    if len_pattern == 0 or len_text == 0 or len_text < len_pattern:
         return []
 
-    positions = []
-    shift = 0
+    pattern = pattern.lower()
+    text = text.lower()
 
-    while shift <= n - m:
-        j = m - 1
-        while j >= 0 and pattern[j] == text[shift + j]:
-            j -= 1
-        if j < 0:
-            positions.append(shift)
-            shift += 1
+    positions = []  # collect starting indexes of matched pat in txt
+    shift = 0       # start at 0 index of text
+    while shift <= len_text - len_pattern:
+        cur_index = len_pattern - 1 # point index to the last char of pattern
+        # loop breaks when all pattern matches or pattern[cur_index] doesnt match current text
+        while cur_index >= 0 and pattern[cur_index] == text[shift + cur_index]:
+            cur_index -= 1  # iterate backwards
+        if cur_index < 0:   # pattern is matched if cur_index is negative
+            positions.append(shift) # put index in positions list
+            # shift by the length of pattern or shift only 1 if it exceeds the text length
+            shift += (len_pattern - bc_table.get(text[shift + len_pattern], -1)
+                if shift + len_pattern < len_text else 1)   # this prevents IndexError
         else:
-            bc_shift = j - bc_table.get(text[shift + j], -1)
-            shift += max(1, bc_shift)
+            # bc_table.get() retrieves value associated with character using text[shift + cur_index]
+            # as key, returning the rightmost occurrence of the character. Being reduced by
+            # cur_index, it will calculate the distance of current index to that rightmost char
+            shift += max(1, cur_index - bc_table.get(text[shift + cur_index], -1))
 
     return positions
