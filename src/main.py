@@ -46,5 +46,5 @@ x = (app.winfo_screenwidth()/2) - width/2
 y = (app.winfo_screenheight()/2) - height/2
 app.geometry('%dx%d+%d+%d' % (width, height, x, y))
 app.minsize(1024, 576)
-app.iconphoto(True, PhotoImage(file=Assets.asset_path('salitrato_icon.png')))
+app.iconphoto(True, PhotoImage(file=Assets.asset_path('logo_nobg.png')))
 app.mainloop()

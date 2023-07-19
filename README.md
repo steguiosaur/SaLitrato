@@ -1,5 +1,6 @@
-![Salitrato Logo](assets/salitrato_light.svg#gh-dark-mode-only)
-![Salitrato Logo](assets/salitrato.svg#gh-light-mode-only)
+<p align="center">
+    <img src="./assets/salitrato_blue.png" alt="Salitrato Logo" title="Salitrato Logo">
+</p>
 
 ## :globe_with_meridians: Description
 
