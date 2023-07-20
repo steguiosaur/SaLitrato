@@ -1,7 +1,7 @@
 def set_badchar_array(pattern):
     table = {}      # creates dictionary of pattern for bad char processing
     for index in range(len(pattern)):
-        table[pattern[index]] = index
+        table[pattern.lower()[index]] = index
     return table    # {'p':0,'a':1,'t':2,'t':3,'e':4,'r':5,'n':6}
 
 def boyer_moore(text, pattern, bc_table):
