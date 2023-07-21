@@ -102,7 +102,11 @@ class FileMenu(CTkListPage, FileMenuFunc):
         self.focus_set()
         self.controller.frames["Previewer"].set_current_folder(self.controller.get_cur_folder())
         self.controller.frames["Previewer"].read_current_folder(self.controller.get_cur_folder())
-        self.controller.frames["Previewer"].load_data_structure()
+        try:
+            self.controller.frames["Previewer"].load_data_structure()
+        except FileNotFoundError:
+            print("No File Found")
+            return 1
         controller.show_frame("Previewer", controller.id)
 
     def refresh_file_list(self):

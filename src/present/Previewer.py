@@ -81,6 +81,8 @@ class Previewer(CTkFrame, FileData):
         self.text_preview.grid(row=3, column=1, rowspan=1, columnspan=4, padx=15, pady=(0, 15), sticky="nsew")
 
     def read_current_folder(self, text: str):
+        if len(text) > 18:
+            text = text[:18-3] + "..."
         self.folder_label.configure(text= text + "/")
 
     def get_image_path(self, filename):
