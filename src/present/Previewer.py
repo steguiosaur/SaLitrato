@@ -56,6 +56,10 @@ class Previewer(CTkFrame, FileData):
 
         self.image_info_frame = CTkFrame(self)
         self.image_info_frame.grid(row=0, column=4, rowspan=3, padx=(0, 15), pady=15, sticky="nsew")
+        self.image_info_frame.columnconfigure((0, 2), weight=1)
+
+        self.list_label = CTkLabel(self.image_info_frame, text="Folder_Name", font=("Verdana", 16, "bold"))
+        self.list_label.grid(row=0, column=1, padx=15, pady=15, sticky="")
 
         self.text_preview = CTkTextbox(self)
         self.text_preview.grid(row=3, column=1, rowspan=1, columnspan=4, padx=15, pady=(0, 15), sticky="nsew")

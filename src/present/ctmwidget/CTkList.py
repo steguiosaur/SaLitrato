@@ -24,13 +24,13 @@ class CTkList(CTkFrame):
         self.list_style(self.theme)
         self.list_box.grid(row=0, column=0, sticky="nsew")
 
-        self.yScroll = CTkScrollbar(self, orientation="vertical")
+        self.yScroll = CTkScrollbar(self, orientation="vertical", bg_color="#202020")
         self.yScroll.configure(command=self.list_box.yview)
-        self.yScroll.grid(row=0, column=1, sticky="ns")
+        self.yScroll.grid(row=0, column=1, rowspan=2, sticky="ns")
         self.list_box.configure(yscrollcommand=self.yScroll.set)
 
         if self.xscroll:
-            self.xScroll = CTkScrollbar(self, orientation="horizontal")
+            self.xScroll = CTkScrollbar(self, orientation="horizontal", bg_color="#202020")
             self.xScroll.configure(command=self.list_box.xview)
             self.xScroll.grid(row=1, column=0, sticky="ew")
             self.list_box.configure(xscrollcommand=self.xScroll.set)
