@@ -17,8 +17,8 @@ class CTkListPage(CTkFrame):
         self.sidebar_frame.grid_rowconfigure(6, weight=1)
 
         self.logo_image = CTkImage(
-            light_image=Image.open(Assets.asset_path("./salitrato_blue.png")),
-            dark_image=Image.open(Assets.asset_path("./salitrato_blue.png")),
+            light_image=Image.open(Assets.asset_path("./salitrato_white.png")),
+            dark_image=Image.open(Assets.asset_path("./salitrato_white.png")),
             size=(200, 42))
         self.logo_img_label=CTkLabel(self.sidebar_frame, image=self.logo_image, text="")
         self.logo_img_label.grid(row=0, column=0, padx=25, pady=25)
