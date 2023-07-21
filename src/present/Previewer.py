@@ -57,12 +57,31 @@ class Previewer(CTkFrame, FileData):
         self.image_info_frame = CTkFrame(self)
         self.image_info_frame.grid(row=0, column=4, rowspan=3, padx=(0, 15), pady=15, sticky="nsew")
         self.image_info_frame.columnconfigure((0, 2), weight=1)
+        self.image_info_frame.grid_propagate(False)
 
-        self.list_label = CTkLabel(self.image_info_frame, text="Folder_Name", font=("Verdana", 16, "bold"))
-        self.list_label.grid(row=0, column=1, padx=15, pady=15, sticky="")
+        self.folder_label = CTkLabel(self.image_info_frame, text="Folder_Name", font=("Verdana", 16, "bold"))
+        self.folder_label.grid(row=0, column=1, padx=15, pady=15, sticky="ew")
+
+        self.filename_label = CTkLabel(self.image_info_frame, text="", font=("Verdana", 11, "bold"))
+        self.filename_label.grid(row=1, column=1, padx=5, pady=5, sticky="")
+
+        self.row_label = CTkLabel(self.image_info_frame, text="Row", font=("Verdana", 11, "bold"))
+        self.row_label.grid(row=2, column=1, padx=5, pady=(5, 0), sticky="ew")
+
+        self.row_count_label = CTkLabel(self.image_info_frame, text="N/A", font=("Verdana", 25, "bold"))
+        self.row_count_label.grid(row=3, column=1, padx=5, pady=(2, 5), sticky="ew")
+
+        self.col_label = CTkLabel(self.image_info_frame, text="Column", font=("Verdana", 11, "bold"))
+        self.col_label.grid(row=4, column=1, padx=5, pady=(5, 0), sticky="ew")
+
+        self.col_count_label = CTkLabel(self.image_info_frame, text="N/A", font=("Verdana", 25, "bold"))
+        self.col_count_label.grid(row=5, column=1, padx=5, pady=(2, 5), sticky="ew")
 
         self.text_preview = CTkTextbox(self)
         self.text_preview.grid(row=3, column=1, rowspan=1, columnspan=4, padx=15, pady=(0, 15), sticky="nsew")
+
+    def read_current_folder(self, text: str):
+        self.folder_label.configure(text= text + "/")
 
     def get_image_path(self, filename):
         return file_opts.get_file_path_from_csv(self.controller.get_cur_folder(), filename)
@@ -74,6 +93,9 @@ class Previewer(CTkFrame, FileData):
         self.search_entry.delete(0, END)
         self.text_preview.delete("1.0", "end")
         self.image_view.update_image(self.get_image_path(None))
+        self.filename_label.configure(text="")
+        self.row_count_label.configure(text="N/A")
+        self.col_count_label.configure(text="N/A")
         self.reset_data()
 
     def position_list_selected(self, event):
@@ -85,12 +107,20 @@ class Previewer(CTkFrame, FileData):
                 self.load_text_file(filename)
                 self.image_view.update_image(self.get_image_path(filename))
                 self.highlight_position(row, index)
+                if len(filename) > 25:
+                    filename = filename[:25-3] + "..."
+                self.filename_label.configure(text=filename)
+                self.row_count_label.configure(text=row+1)
+                self.col_count_label.configure(text=index)
 
     def search_entry_changed(self, event):
         search_pattern = self.search_entry.get()
         self.position_list.delete(0, END)
         self.text_preview.delete("1.0", "end")
         self.image_view.update_image(self.get_image_path(None))
+        self.filename_label.configure(text="")
+        self.row_count_label.configure(text="N/A")
+        self.col_count_label.configure(text="N/A")
         if search_pattern:
             self.set_bad_character_pattern(search_pattern)
             self.set_match_result(search_pattern)
@@ -109,7 +139,9 @@ class Previewer(CTkFrame, FileData):
                 for row, indexes in matched_rows.items():
                     for index in indexes:
                         row_text = self.data[filename][row]
-                        item = f"{filename}:{row}:{index}: -> {row_text}"
+                        if len(row_text) > 100:
+                            row_text = row_text[:100-3] + "..."
+                        item = f"{filename}:{row+1}:{index}: -> {row_text}"
                         self.position_list.insert(END, item)
                         self.item_key_map[item_index] = (filename, row, index)
                         item_index += 1

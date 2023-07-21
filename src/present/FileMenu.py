@@ -101,6 +101,7 @@ class FileMenu(CTkListPage, FileMenuFunc):
             return
         self.focus_set()
         self.controller.frames["Previewer"].set_current_folder(self.controller.get_cur_folder())
+        self.controller.frames["Previewer"].read_current_folder(self.controller.get_cur_folder())
         self.controller.frames["Previewer"].load_data_structure()
         controller.show_frame("Previewer", controller.id)
 
