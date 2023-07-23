@@ -104,6 +104,4 @@ def get_file_path_from_csv(current_dir, file_name):
         reader = csv.DictReader(file)
         for row in reader:
             if row['file_name'] == file_name:
-                return row['file_path']
-
-    return default_file_path
+                return row['file_path'] if os.path.exists(row['file_path']) else default_file_path
