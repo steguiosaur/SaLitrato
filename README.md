@@ -42,3 +42,10 @@ Folder-wide image text search
     ```sh
     python main.py
     ```
+
+## :page_with_curl: Paper
+
+View document source code on `./doc/latex/`
+
+![SaLitrato: Application of Boyer-Moore String Matching Algorithm for Text Search on Multiple Image
+Files](./doc/documentation.pdf)

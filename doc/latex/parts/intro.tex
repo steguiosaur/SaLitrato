@@ -1,41 +1,117 @@
 \part{Introduction and its Background}
 
 \hspace\parindent
-Over the years, technology has drastically changed our world and daily lives. It also became more personal and portable – as evident with the massive growth of individuals having personal computers. Nowadays, people are using computers to help them work or study, from communicating with someone, taking photos, searching information on the web, to even writing and creating a document electronically.
+In today’s digital age, one of the most useful functions of using an app on a computer is its
+capability of allowing an individual to find words or phrases quickly in a full text, also known as
+the full-text search feature within documents. One popular function that uses the concept of
+full-text search is the keyboard shortcut “ctrl+f”. People often use this to find a specific phrase
+or characters in a long document or programs such as internet browsers, word processors,
+PowerPoint, etc.
 
 \hfill
 
-One of the most useful functions of using an app on a computer is its capability of allowing an
-individual to find words or phrases quickly in a full text, also known as the \textbf{full-text
-search} feature. One popular function that uses the concept of full-text search is the keyboard shortcut “ctrl+f”. People often use this to find a specific phrase or characters in a long document or programs such as internet browsers, word processors, power point, etc.
+\textbf{Full-text search} is a method to search and locate a text pattern through the actual content
+of your computer documents \texttt{(Full Text Search | FileCenter DMS, 2023; Stasilovich, 2018)}.
+However, this feature is accompanied by a significant limitation. In this technique, the documents
+must have actual text and not just scanned images. Therefore, if an individual cannot select and
+copy a text from the document, the text cannot be searched. This also means that a scanned document,
+scanned image, or any type of photo is not searchable even if it has text in it.  
 
 \hfill
 
-\textbf{Full-text search} is a method to search and locate a text pattern through the actual content of your computer documents (Full Text Search | FileCenter DMS, 2023; Full Text Search: How it Works, 2018). In this technique, the documents must have an actual text and not just scanned images. Therefore, if an individual can’t select and copy a text from the document, the text cannot be searched. This also means that a scanned document, scanned image, or any type of photos are not searchable even if it has text in it.
+Since images also contain valuable information and play a growing significant role in terms of
+communication, information sharing, and data representation, the inability to extract text from
+images in a full-text search feature makes it more difficult to access valuable information
+efficiently. To bridge the gap between text and images, Optical Character Recognition (OCR)
+technology was developed by converting all possible text from an image to become machine-readable.
+According to Kudan (2023), text recognition technology may also involve translating, processing text
+discovered in images, and turning printed documents into editable formats. It may even read text
+aloud to those who are blind. Jobs in industries including business, education, healthcare, and
+government may be done much more efficiently by using text recognition to automate manual
+activities, boost productivity, and provide access to previously inaccessible information. The trend
+of storing information from printed materials in digital format has greatly increased in recent
+years. This makes it easier to store information and access it when needed, as well as helping to
+preserve the information. The field of text recognition is also driven by the need for a more
+convenient and quick way of preserving and accessing documents that contain information. One of the
+easiest ways to transfer information from paper or books is to scan them. This turns the information
+into an image and prevents the text from being reproduced (Adyanthaya, 2020).
 
 \hfill
 
-In terms of implementing a full-text search feature into an application software, it is typical to
-utilize a string-matching algorithm, such as the Boyer-Moore Algorithm, KMP Algorithm, Naïve
-Algorithm, and Brute Force Algorithm. \textbf{String-matching algorithms} are algorithms that find
-occurrences or matches of a pattern within a text or content of multiple files (GeeksforGeeks,
-2022). With these string-matching algorithms, selecting one depends on the nature and requirements
-of the software. As such, the study will utilize \textbf{Boyer-Moore Algorithm} as it is suitable for
-pattern searching in huge bodies of text, and also the more efficient algorithm compared to other several
-string-matching algorithms (Khumaidi et al., 2020; Layustira \& Istiono, 2021; Rasool et al., 2012; 
-Supatmi \& Sumitra, 2019; Dawood \& Barakat, 2020; Lin \& Soe, 2020; Buslim et al., 2020; Borah et al., 2013).
+The feature that uses OCR technology to extract text from images and lets users search specific
+words, characters, or phrases within the extracted text from images is called the \textbf{in-image
+text searching feature}. The main distinction between the full-text search and in-image text search
+lies in the source of the text being searched. In-image text search searches for text specifically
+from images while full-text search only recognizes text from text-based content such as documents or
+articles. There are numerous valuable applications of \textbf{in-image text searching} across
+various industries. One instance is it enables an efficient method for converting physical documents
+into digital and searchable formats. An individual only needs to scan physical documents such as
+books, contracts, and receipts and upload them to software capable of in-image text searching. This
+method allows faster retrieval of information and reduces the need for manually typing the content
+of the physical documents on a computer. The feature can also be useful in content moderation.
+Social media applications and platforms can use this feature to scan images for text content, then
+process the extracted text to detect any harmful or inappropriate text that violates their
+platform’s policies. Furthermore, in-image text search is also notable for educational and learning
+purposes; students, teachers, and researchers can use the feature to take notes and search specific
+terms efficiently.
 
 \hfill
 
-Since the Boyer-Moore Algorithm is a powerful and efficient string-matching algorithm, numerous existing studies and applications have implemented this algorithm for the full-text search feature of their software. However, based on the lack of resources and studies online, there is little to no applications that provide an in-image text searching feature utilizing Boyer-Moore as its string-matching algorithm. For instance, Waruwu (2017), Buslim et al. (2020), Khumaidi et al. (2020), and Layustira and Istiono (2021) did not use the Boyer-Moore algorithm to implement a text search feature for text patterns present in an image for their application software. In-image text search refers to the method of searching and extracting text within an image or multiple image files.
+Various software with OCR and the capability to extract text within images already exist. However,
+there are still fewer studies online about applications that provide users with an added feature of
+searchable text within the extracted content from the images. The full-text search feature is still
+the most common one to be used in applications. Based on the resources and studies the researchers
+have gathered online, the text-searching feature is more implemented in text-based content over
+images. Furthermore, studies online often used the Boyer-Moore algorithm to implement their search
+function. For instance, Waruwu (2017), Buslim et al. (2020), Khumaidi et al. (2020), and Layustira
+and Istiono (2021) did use the Boyer-Moore algorithm but did not implement the algorithm for an
+in-image text search feature. These studies did not allow users to search for text patterns within
+the content of images for their application software. Additionally, in the study of Fitriyah et al.
+(2020), the Boyer-Moore algorithm was implemented in a web-based computer and informatic terms
+dictionary. In the study of Arini and Suseno (2019), Boyer-Moore Algorithm was applied to a
+dictionary of web-based information technology terms. Furthermore, the algorithm was also used in
+the application of dictionary livestock terms (Saputri et al., 2018). Based on the mentioned studies
+that use the Boyer-Moore algorithm for text-search features, the algorithm, and the feature is often
+used in dictionaries and other text-based content or forms.
 
 \hfill
 
-To address this issue, the study will focus on developing an application software that has the capability of detecting and locating a text pattern within an image file using Boyer-Moore algorithm as the string-matching algorithm. The application will also be integrated with an optical character recognition (OCR) API to recognize and extract texts from images. Furthermore, a function that highlights the location of the text pattern in the extracted text from an image or shows a message if the pattern is not detected will be implemented for the software.
+As evident in the studies and resources online, Boyer-Moore Algorithm is commonly used for search
+functions in text-based content, such as dictionaries and documents. Thus, there is a lack of
+studies and resources online about applications that offer in-image text searching while also
+utilizing the Boyer-Moore algorithm as its string-matching algorithm. To address the aforementioned
+issue, the study will focus on developing an application software capable of \textbf{folder-wide detecting
+and locating a text pattern within multiple image files}, enabling users to efficiently locate
+information present in images.
 
-% \begin{figure}[hbt!]
-%    \center
-%    \noindent\includegraphics[width=0.9\textwidth]{figflowchart.png}
-%    \caption{Flowchart}
-%    \label{fig:flowchart}
-% \end{figure}
+\hfill
+
+In terms of implementing a text search feature into application software, it is typical to utilize a
+string-matching algorithm, such as the Boyer-Moore Algorithm, KMP Algorithm, Naïve Algorithm, and
+Brute Force Algorithm. \textbf{String-matching algorithms} are algorithms that find occurrences or matches of
+a pattern within a text or content of multiple files (GeeksforGeeks, 2022). Since numerous
+string-matching algorithms can be used, selecting one depends on the nature and requirements of the
+software. As such, the researchers will utilize the \textbf{Boyer-Moore algorithm} to implement the in-image
+text search feature on the software.
+
+\hfill
+
+The key feature of the Boyer-Moore Algorithm is its efficiency in pattern searching within huge
+bodies of text. As the number of images uploaded in the in-image text search function increases, the
+larger the block of text will be extracted. Thus, the number of texts to be traversed by the
+algorithm increases too. Boyer-Moore Algorithm is well-suited for this scenario as it works best
+with huge bodies of text. Furthermore, according to several studies online, the \textbf{Boyer-Moore
+Algorithm} is the more efficient algorithm compared to several other string-matching algorithms.
+(Khumaidi et al., 2020; Layustira \& Istiono, 2021; Rasool et al., 2012; Supatmi \& Sumitra, 2019;
+Dawood \& Barakat, 2020; Lin \& Soe, 2020; Buslim et al., 2020; Borah et al., 2013). Additionally,
+numerous studies online that implemented search functions using the Boyer-Moore algorithm have also
+proven the efficiency of the algorithm (Fitriyah et al., 2020; Arini \& Suseno, 2019; Saputri et
+al., 2018).
+
+\hfill
+
+Since the algorithm for the study has been decided, other features will be implemented into the
+software. The application will be integrated with an optical character recognition (OCR) API to
+recognize and extract texts from images. The software will also implement a function that highlights
+the location of the text pattern in the extracted text or shows a message if the text pattern is not
+detected.

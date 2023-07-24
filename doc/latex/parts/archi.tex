@@ -67,6 +67,26 @@ be run on by the Boyer-Moore Algorithm.
 \end{tabular}
 \end{center}
 
+\section*{Image to Text Conversion}
+
+\begin{figure}[hbt!]
+    \center
+    \noindent\adjustbox{width=.89\textwidth}{\includesvg{images/ocrapi}}
+    \caption{Image to text extraction with Tesseract 4}
+    \label{fig:ocrapi}
+\end{figure}
+
+SaLitrato is dependent on the stable version of Tesseract 4 for extracting text from image files. Tesseract 
+is an OCR Engine focused on line and character recognition. With Python, the text extraction
+API can be accessed via importing \texttt{image\_to\_string} on \texttt{pytesseract}
+package.
+
+\hfill
+
+\noindent
+\texttt{pytesseract} is a wrapper class that allows interaction with the Tesseract engine.
+
+
 \section*{Data Structure Preparation for Indexing}
 
 \begin{figure}[hbt!]
@@ -76,11 +96,10 @@ be run on by the Boyer-Moore Algorithm.
     \label{fig:data_structure1}
 \end{figure}
 
-\hspace\parindent
-In figure \ref{fig:data_structure1}, it shows how the data will be structured. This prepares the
+In figure \ref{fig:data_structure1} shows how the data will be structured. This prepares the
 text of each file to undergo what we call as indexing. Indexing refers to identification of the
 location of a resource based on file names or key data fields in a record. Traversing through a
-record like this (Fig \ref{fig:indexing}) would make tracking the index of where the pattern appeared become easier.
+record like this (Fig \ref{fig:indexing}) would make tracking the index of where the current pattern appeared become easier.
 
 \begin{figure}[hbt!]
    \center
@@ -89,14 +108,14 @@ record like this (Fig \ref{fig:indexing}) would make tracking the index of where
    \label{fig:indexing}
 \end{figure}
 
-\section*{Algorithm}
+\section*{Algorithm Design}
 
 \hspace\parindent
 Having multiple lists of text to traverse through requires a fast and efficient algorithm for
-pattern matching. There were multiple string matching algorithms existing like Naive Algorithm, Z
+pattern matching. There were multiple string matching algorithms that exist like Naive Algorithm, Z
 Algorithm, Knuth Morris Pratt, and Boyer Moore algorithm.  Observing that
-as the number of image files being included for search increases, the number of text to be passed by
-the algorithm also increased drastically. Among said stiring matching algorithms,
+as the number of image files being included for search increases, the number of text for 
+an algorithm to pass also increased drastically. Among said stiring matching algorithms,
 \textbf{Boyer Moore string matching algorithm} works best in this kind of scenario. Though at worst
 case it runs on $O(nm)$ where n is the length of text and m is length of pattern, it is outweighed
 by its best case of $O(n/m)$ assuming there are limited number of matches occured which happens to
@@ -105,24 +124,27 @@ be the case on having multiple texts to traverse.
 \hfill
 
 The \textbf{Boyer Moore Algorithm} in this program uses bad character heuristics to determine where
-the mismatch appeared. Multiple references exist for getting the code for this algorithm, but it
+the mismatch appeared. Multiple references exist for getting the code of this algorithm, which all
 comes with several drawbacks. We take the example of what was written in GeeksForGeeks [21]. 
 
 \hfill
 
-\begin{lstlisting}
+\begin{tcolorbox}[colback=white, title=\textbf{Bad Character Preprocessing}]
+    \begin{lstlisting}[style=py]
 NO_OF_CHARS = 256
  
 def badCharHeuristic(string, size):
     badChar = [-1]*NO_OF_CHARS
     for i in range(size):
         badChar[ord(string[i])] = i;
-    # returns bad_char_array
+    # return bad_char_array
 
 def search(txt, pat):
     badChar = badCharHeuristic(pat, m)
     # return indexes of where the patterns appeared
 \end{lstlisting}
+\end{tcolorbox}
+
 
 \hfill
 
@@ -132,11 +154,11 @@ magnitude. The \texttt{badCharHeuristic()} function itself can get $O(size)$ as 
 Without refactoring the code, it could reach a complexity of $O(size*rows)$ given the data is now
 being traversed. It can be
 prevented by decoupling \texttt{badCharHeuristic()} inside the \texttt{search()}. Making the search
-contain the \texttt{badChar} only as an argument.
+contain \texttt{badChar} only as an argument.
 
 \hfill
 
-Another problem for the code shown above is the \texttt{NO\_OF\_CHARS = 256}. Giving a limit to the
+Another problem for the code shown above is the \texttt{NO\_OF\_CHARS = 256}. Giving a limit to
 values that can be inserted into the bad character array, would most likely generate an \texttt{Out
 of Bounds Exception} or
 \texttt{IndexError}. The said error is raised when an index that is out of range or invalid for
@@ -145,7 +167,8 @@ allocated manually and limiting the extension of bad character array, it becomes
 
 \hfill
 
-\begin{lstlisting}
+\begin{tcolorbox}[colback=white, title=\textbf{Modified Bad Character Preprocessing}]
+\begin{lstlisting}[style=py]
 def badCharHeuristic(pat):
     table = {}
     for i in range(len(pat)):
@@ -153,11 +176,31 @@ def badCharHeuristic(pat):
     return table
 \end{lstlisting}
 
-\noindent
-\texttt{\{'a': 0, 'n': 1, 'd': 2\}} - sample pattern input: "and"
+\hrulefill
+
+\textbf{Sample input:} \texttt{and}
+
+\textbf{Output:} \texttt{\{'a': 0, 'n': 1, 'd': 2\}}
+\end{tcolorbox}
+
+\section*{Retrieval of Matched Patterns}
+
+\begin{figure}[hbt!]
+    \center
+    \noindent\adjustbox{}{\includesvg{images/result}}
+    \caption{Generation of result}
+    \label{fig:result}
+\end{figure}
+
+Getting the result of matches occured requires the algorithm to traverse on multiple list of
+rows on each file while retrieving the current index of where each pattern started (Fig
+\ref{fig:result}). It accesses the
+data prepared for indexing which is stored in a dictionary or what we also call as hash table.
+This hash table with key as file name and list of rows as value creates a versatile way of identifing
+where we could find the result of the matching patterns.
 
 \hfill
 
-\section*{Retrieval of Matched Patterns}
-Getting the result of matches occured requires the algorithm to traverse on multiple list of
-rows on each file while retrieving the current index of where each pattern started.
+Results generated is then used for identifying what position should be highlighted on the Textbox.
+Highlight for Textbox require the coordinates \texttt{begin=(row, column)} and \texttt{end=(row,
+column + pattern.len)}.
