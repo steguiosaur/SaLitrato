@@ -47,5 +47,4 @@ Folder-wide image text search
 
 View document source code on `./doc/latex/`
 
-![SaLitrato: Application of Boyer-Moore String Matching Algorithm for Text Search on Multiple Image
-Files](./doc/documentation.pdf)
+![SaLitrato Paper](https://github.com/steguiosaur/SaLitrato/raw/main/doc/documentation.pdf)
