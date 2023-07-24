@@ -23,7 +23,7 @@ The user will create and select a folder to which the pre-processed file would b
 
 \hfill
 
-Lastly it will undertake a two-pass procedure using an adaptive classifier to enhance the accuracy of the recognition process. Only then will it be put through the Boyer-Moore Algorithm where the user-inputted characters will be compared to the text from the post-processed file. To be able to assist the users easily identify the result, the software also has a feature that highlights the location of the text pattern inside an image file or displays a prompt if the pattern is not recognized.
+Lastly, it will undertake a two-pass procedure using an adaptive classifier to enhance the accuracy of the recognition process. Only then will it be put through the Boyer-Moore Algorithm where the user-inputted characters will be compared to the text from the post-processed file. To be able to assist the users in easily identifying the result, the software also has a feature that highlights the location of the text pattern inside an image file or displays a prompt if the pattern is not recognized.
 
 \section*{System Architecture}
 
@@ -112,18 +112,18 @@ record like this (Fig \ref{fig:indexing}) would make tracking the index of where
 
 \hspace\parindent
 Having multiple lists of text to traverse through requires a fast and efficient algorithm for
-pattern matching. There were multiple string matching algorithms that exist like Naive Algorithm, Z
-Algorithm, Knuth Morris Pratt, and Boyer Moore algorithm.  Observing that
+pattern matching. There are multiple string matching algorithms that exist like Naive Algorithm, Z
+Algorithm, Knuth Morris Pratt, and Boyer-Moore algorithm.  Observing that
 as the number of image files being included for search increases, the number of text for 
-an algorithm to pass also increased drastically. Among said stiring matching algorithms,
+an algorithm to pass also increased drastically. Among said string matching algorithms,
 \textbf{Boyer Moore string matching algorithm} works best in this kind of scenario. Though at worst
-case it runs on $O(nm)$ where n is the length of text and m is length of pattern, it is outweighed
-by its best case of $O(n/m)$ assuming there are limited number of matches occured which happens to
+case it runs on $O(nm)$ where n is the length of text and m is the length of pattern, it is outweighed
+by its best case of $O(n/m)$ assuming there are a limited number of matches that occured which happens to
 be the case on having multiple texts to traverse.
 
 \hfill
 
-The \textbf{Boyer Moore Algorithm} in this program uses bad character heuristics to determine where
+The \textbf{Boyer-Moore Algorithm} in this program uses bad character heuristics to determine where
 the mismatch appeared. Multiple references exist for getting the code of this algorithm, which all
 comes with several drawbacks. We take the example of what was written in GeeksForGeeks [21]. 
 
