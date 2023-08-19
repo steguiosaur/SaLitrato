@@ -4,21 +4,25 @@
 
 ## :globe_with_meridians: Description
 
-Folder-wide image text search
+Text search desktop app for multiple image files
 
-## :abacus: Features
+## :gear: Features
 
 - Included image files are indexed for search
 - Run Boyer-Moore Algorithm on included files
 - Display all instances of pattern in a list
 - Preview occurence of selected pattern when selected on list
 
+## :camera: Screenshot
+
+![Salitrato Screenshot](./assets/screenshot.png)
+
 ## :clipboard: Setup Guide
 
 ### Prerequisites
 
 - Python 3.11.x
-- Tesseract (OCR engine)
+- ![Tesseract (OCR engine)](https://github.com/tesseract-ocr/tesseract/wiki/Installation)
 - Install required dependencies
 
 ### Execution
@@ -42,9 +46,3 @@ Folder-wide image text search
     ```sh
     python main.py
     ```
-
-## :page_with_curl: Paper
-
-View document source code on `./doc/latex/`
-
-![SaLitrato Paper](https://github.com/steguiosaur/SaLitrato/raw/main/doc/documentation.pdf)

@@ -15,15 +15,30 @@
 \section*{Design Goal Overview}
 
 \hspace\parindent
-The figure (Fig \ref{fig:salitrato_flowchart}) above illustrates how the system software that implements an in-image text search method will search for and extract text within an image or multiple image files using Boyer-Moore algorithm. A text pattern within an image file will be detected and located using the Boyer-Moore algorithm. The system will additionally incorporate the use of optical character recognition (OCR) API with the version of Tesseract 4 to identify and extract texts from images.
+The figure (Fig \ref{fig:salitrato_flowchart}) above illustrates how the system software that
+implements an in-image text search method will search for and extract text within an image or
+multiple image files using Boyer-Moore algorithm. A text pattern within an image file will be
+detected and located using the Boyer-Moore algorithm. The system will additionally incorporate the
+use of optical character recognition (OCR) API with the version of Tesseract 4 to identify and
+extract texts from images.
 
 \hfill
 
-The user will create and select a folder to which the pre-processed file would be stored, the aforementioned file would then be checked if it is one of the supported formats. It will then be subjected to the Python Tesseract package where it will undergo a connected component analysis that gathers and stores the outlines. The outlines will then be further analyzed in a fixed pitch or if they are proportional texts. They will then be separated into words according to character spacing by using character cells.
+The user will create and select a folder to which the pre-processed file would be stored, the
+aforementioned file would then be checked if it is one of the supported formats. It will then be
+subjected to the Python Tesseract package where it will undergo a connected component analysis that
+gathers and stores the outlines. The outlines will then be further analyzed in a fixed pitch or if
+they are proportional texts. They will then be separated into words according to character spacing
+by using character cells.
 
 \hfill
 
-Lastly, it will undertake a two-pass procedure using an adaptive classifier to enhance the accuracy of the recognition process. Only then will it be put through the Boyer-Moore Algorithm where the user-inputted characters will be compared to the text from the post-processed file. To be able to assist the users in easily identifying the result, the software also has a feature that highlights the location of the text pattern inside an image file or displays a prompt if the pattern is not recognized.
+Lastly, it will undertake a two-pass procedure using an adaptive classifier to enhance the accuracy
+of the recognition process. Only then will it be put through the Boyer-Moore Algorithm where the
+user-inputted characters will be compared to the text from the post-processed file. To be able to
+assist the users in easily identifying the result, the software also has a feature that highlights
+the location of the text pattern inside an image file or displays a prompt if the pattern is not
+recognized.
 
 \section*{System Architecture}
 
